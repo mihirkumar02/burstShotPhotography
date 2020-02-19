@@ -1,0 +1,243 @@
+*{
+    font-family: 'Tajawal', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+.welcomeText{
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    padding: 30vh 0 30vh 0;
+    color: white;
+}
+
+.slideshow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+  .slideshow li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 20s linear infinite;
+  }
+  
+  
+  
+  /* Animations*/
+  
+  .slideshow li:nth-child(1) {
+    background-image: url('../img/1.jpg');
+  }
+  .slideshow li:nth-child(2) {
+    background-image: url('../img/2.jpg');
+    animation-delay: 5s;
+  }
+  .slideshow li:nth-child(3) {
+    background-image: url('../img/3.JPG');
+    animation-delay: 10s;
+  }
+  .slideshow li:nth-child(4) {
+    background-image: url('../img/4.jpg');
+    animation-delay: 15s;
+  }
+  .slideshow li:nth-child(5) {
+    background-image: url('../img/5.jpg');
+    animation-delay: 20s;
+  }
+  
+  @keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+    }
+  }
+
+
+.welcomeBox{
+    margin: 0 auto;
+    width: 40vw;
+    border-radius: 10px;
+    padding: 15vh 0;
+    background-color: rgb(0,0,0,0.7);
+    box-shadow: 0 0 2px 3px black;
+}
+  
+.sideButton{
+    position: absolute;
+    box-shadow: 0 1px 1px 2px white;
+    top: 5%;
+    /* to make rounded button */
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    
+    background-color: yellow;
+    padding: 10px;
+    color: black;
+    font-size: 35px;
+}
+
+.sideInstagram{
+    position: absolute;
+    top: 5%;
+    color:yellow;
+    font-size: 40px;
+}
+
+.sideInstagram .fa-instagram{
+    color: #eb38a0;
+}
+
+.spannedFollow{
+    color: yellow;
+    position: absolute;
+    font-size: 25px;
+    left: 5%;
+    top: 12%;
+}
+
+.leftside{
+    left: 5%;
+}
+
+.rightside{
+    right: 5%;
+}
+
+.sideButton:hover{
+    box-shadow: none;
+    background-color: yellow;
+    transition-duration: 1s;
+}
+
+.spannedText{
+    color:yellow;
+}
+
+.button{
+    border: none;
+    border-radius: 4px;
+    padding: 5px 5px;
+    font-size: 17px;
+    font-weight: bold;
+    color: yellow;
+    background-color:black;
+}
+
+.button-success:hover{
+    background-color: yellow;
+    transition-duration: 1s;
+    font-weight: bold;
+}
+
+.welcomeText a{
+    text-decoration: none;
+}
+
+.welcomeText a:hover{
+    color: black;
+}
+
+
+#contact{
+    padding:20vh 0 30vh 0;
+    text-align: center;
+}
+
+#contact h2{
+    font-weight: bold;
+}
+
+.form-holder{
+    margin: 0 auto;
+    width: 40vw;
+    padding: 50px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.input-field{
+    border: none;
+    background-color: lightyellow;
+    width: 90%;
+    padding: 10px 5px;
+    margin-bottom: 3px;
+}
+
+#footer{
+    padding: 5vh;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.heart{
+    color: red;
+}
+
+.mylinks li{
+    list-style-type: none;
+    display: inline;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.instagram a{
+    color:#eb38a0;
+    font-size: 25px;
+}
+
+.facebook a{
+    color: #452dcc;
+    font-size: 25px;
+}
+
+.linkedin a{
+    color: #e3defc;
+    font-size: 25px;
+}
+
+.showcaseArea{
+    min-height: 100vh;
+}
+
+.coverImage{
+    text-align: center;
+    border: 1px solid black;
+}
+
+.coverImage img{
+    max-width: 300px;
+    max-height: 200px;
+}
+
