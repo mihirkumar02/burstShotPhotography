@@ -297,7 +297,7 @@ html{
 }
 
 .facebook a{
-    color: #1612ee;
+    color: #3d75ee;
     font-size: 25px;
 }
 
@@ -324,6 +324,6 @@ html{
 
 @media only screen and (max-width: 600px){
     .welcomeText h1{
-        font-size: 30px;
+        font-size: 25px;
     }
 }
