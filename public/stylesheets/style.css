@@ -186,6 +186,7 @@ html{
     transition-duration: 0.5s;
 }
 
+
 #about{
     text-align: center;
     padding: 10vh 0 15vh 0;
@@ -325,5 +326,13 @@ html{
 @media only screen and (max-width: 600px){
     .welcomeText h1{
         font-size: 25px;
+    }
+
+    #feature{
+        padding: 5vh 0 10vh 0;
+    }
+
+    .shot{
+        width: 60%;
     }
 }

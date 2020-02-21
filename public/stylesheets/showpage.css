@@ -188,3 +188,62 @@
     from{ font-size: 30px; }
     to{ font-size: 35px; }
 }
+
+@media only screen and (max-width: 600px){
+    .feature-image{
+        max-width: 50%;
+    }
+
+    .images{
+        min-height: 350px;
+    }
+
+    .rightshift{
+        text-align: center;
+    }
+
+    .leftshift{
+        text-align: center;
+    }
+
+    .heading h2{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .feature-image{
+        max-width: 50%;
+    }
+
+    .rightshift{
+        text-align: center;
+    }
+
+    .leftshift{
+        text-align: center;
+    }
+    
+    .heading h2{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .feature-image{
+        max-width: 55%;
+    }
+
+    .rightshift{
+        text-align: center;
+    }
+
+    .leftshift{
+        text-align: center;
+    }
+
+    .heading h2{
+        font-size: 25px;
+    }
+}
+
