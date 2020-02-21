@@ -14,16 +14,13 @@
     list-style-type: none;
 }
 
-.links li{
-    display: inline;
+.links a{
+    display: block;
     text-decoration: none;
     font-weight: bold;
     padding: 15px;
     float: left;
     font-size: 20px;
-}
-
-.links a{
     color: black;
 }
 
@@ -190,6 +187,11 @@
     text-align: left;
 }
 
+.links .icon{
+    display: none;
+}
+
+
 @keyframes zoomIn{
     from{ font-size: 20px; }
     to{ font-size: 30px; }
@@ -260,5 +262,38 @@
     .form-holder-new-post{
         width: 90vw;
     }
+
+    .links a{
+        display: none;
+    }
+
+    .links a.icon{
+        float: right;
+        display: block;
+    }
 }
 
+
+@media only screen and (max-width: 992px){
+    .myNav{
+        min-height: 20vh;
+    }
+
+    .links.responsive {
+        position: relative;
+    }
+
+    .links.responsive a.icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .links.responsive a{
+        margin-top: 15px;
+        color: black;
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
