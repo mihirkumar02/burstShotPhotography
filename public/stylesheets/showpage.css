@@ -83,6 +83,17 @@
     color: yellow;
 }
 
+.button-back{
+    color: black;
+    background-color: white;
+    padding: 10px;
+    margin-left: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
 .form-holder-new-post{
     margin: 0 auto;
     width: 40vw;

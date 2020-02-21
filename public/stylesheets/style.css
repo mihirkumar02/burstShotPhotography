@@ -104,11 +104,11 @@ textarea{
     width: 70px;
     height: 70px;
     border-radius: 35px;
+    font-size: 35px;
     
     background-color: yellow;
     padding: 10px;
     color: black;
-    font-size: 35px;
 }
 
 .sideInstagram{
