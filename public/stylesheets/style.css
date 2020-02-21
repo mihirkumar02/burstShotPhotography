@@ -212,8 +212,8 @@ html{
 }
 
 .info{
-    margin-top: 30px;
-    padding: 10vh 0 0 0;
+    margin-top: 20px;
+    padding: 15vh 0 0 0;
 }
 
 .words{
@@ -302,8 +302,8 @@ html{
     font-size: 25px;
 }
 
-.linkedin a{
-    color: #e3defc;
+.gmail a{
+    color: #b6382f;
     font-size: 25px;
 }
 
@@ -329,6 +329,10 @@ html{
     }
 
     #feature{
+        padding: 5vh 0;
+    }
+
+    .form-container{
         padding: 5vh 0 10vh 0;
     }
 
@@ -338,5 +342,23 @@ html{
 
     .shot{
         width: 60%;
+    }
+
+    .info{
+        padding: 5vh 0;
+    }
+
+    .me{
+        width: 40%;
+        height: 40%;
+    }
+
+    .info h4{
+        font-size: 17px;
+    }
+
+    .hooman{
+        width: 40%;
+        height: 20%;
     }
 }
