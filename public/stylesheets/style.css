@@ -189,8 +189,8 @@ html{
 
 #about{
     text-align: center;
-    padding: 10vh 0 15vh 0;
-    min-height: 50vh;
+    padding: 10vh 0;
+    min-height: 40vh;
     background-color: black;
     color: white;
 }
@@ -302,6 +302,11 @@ html{
     font-size: 25px;
 }
 
+.linkedin a{
+    color: #b8ceeb;
+    font-size: 25px;
+}
+
 .gmail a{
     color: #b6382f;
     font-size: 25px;
@@ -360,5 +365,21 @@ html{
     .hooman{
         width: 40%;
         height: 20%;
+    }
+
+    .form-holder{
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 992px){
+
+    .me{
+        width: 30%;
+        height: 30%;
+    }
+
+    .form-holder{
+        width: 90vw;
     }
 }
