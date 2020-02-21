@@ -1,5 +1,6 @@
 *{
     font-family: 'Roboto', sans-serif;
+    max-width: 100vw;
 }
 
 html{
@@ -296,7 +297,7 @@ html{
 }
 
 .facebook a{
-    color: #452dcc;
+    color: #1612ee;
     font-size: 25px;
 }
 
@@ -319,3 +320,10 @@ html{
     max-height: 200px;
 }
 
+
+
+@media only screen and (max-width: 600px){
+    .welcomeText h1{
+        font-size: 30px;
+    }
+}
