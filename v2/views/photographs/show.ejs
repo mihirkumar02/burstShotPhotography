@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mihir Kumar Singh">
+    <meta name="keywords" content="pic, photo, photography, image, upload, burstshot">
+    <meta name="description" content="A website to display the pictures from my Instagram profile">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/showpage.css">
+    <title>Post | BurstShot Photography</title>
+</head>
+
+<body>
+    <%- include('../partials/nav') %>
+
+    <section id="show">
+        <a class="button button-back" href="/photographs"><i class="material-icons">arrow_back</i></a>
+        <div class="heading">
+            <h2>Clicked by : <%= post.photographer %></h2>
+        </div>
+        <div class="container show-box">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 rightshift">
+                    <h3><%= post.location %></h3>
+                    <h4><%= post.caption %></h4>
+                    <span class="instagram"><a href="<%= post.instagram %>"><i class="fa fa-instagram"></i></a></span>
+                </div>
+                <div class="col-md-6 col-sm-12 leftshift">
+                    <img class="show-image" src="../admin/<%= post.image %>" alt="Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('../partials/footer') %>
