@@ -47,22 +47,22 @@ html{
   /* Animations*/
   
   .slideshow li:nth-child(1) {
-    background-image: url('../img/1.webp');
+    background-image: url('../img/1.jpg');
   }
   .slideshow li:nth-child(2) {
-    background-image: url('../img/2.webp');
+    background-image: url('../img/2.jpg');
     animation-delay: 5s;
   }
   .slideshow li:nth-child(3) {
-    background-image: url('../img/3.webp');
+    background-image: url('../img/3.jpg');
     animation-delay: 10s;
   }
   .slideshow li:nth-child(4) {
-    background-image: url('../img/4.webp');
+    background-image: url('../img/4.jpg');
     animation-delay: 15s;
   }
   .slideshow li:nth-child(5) {
-    background-image: url('../img/5.webp');
+    background-image: url('../img/5.jpg');
     animation-delay: 20s;
   }
   
