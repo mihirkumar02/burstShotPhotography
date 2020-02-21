@@ -4,17 +4,12 @@ const passport = require('passport');
 const methodOverride = require('method-override');
 const path = require('path');
 const multer = require('multer');
-const flash = require('connect-flash');
-const bcrypt = require('bcryptjs');
-const session = require('express-session');
 const Post = require('./models/post');
 const Mail = require('./models/mail');
 const Feature = require('./models/feature');
-const User = require('./models/user');
+
 const app = express();
 
-// ========== PASSPORT CONFIG ===========
-require('./config/passport')(passport);
 
 //  ========== DB CONFIG ==========
 const db = require('./config/keys').MongoURI;
@@ -30,24 +25,6 @@ app.use(express.static("./public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 
-
-// Express Session middleware
-app.use(session({
-    secret: 'Secret message', 
-    resave: true,
-    saveUninitialized: true
-}));
-
-
-// PASSPORT middleware (always after express session middleware)
-app.use(passport.initialize());
-app.use(passport.session());
-
-// Global variables
-app.use(function(req, res, next) {
-    res.locals.currentUser = req.user;
-    next();
-});
 
 
 const PORT = process.env.PORT || 3000;
@@ -116,72 +93,6 @@ function checkFileType(file, cb){
 // ========== ROUTES ===========
 // =============================
 
-
-
-// =========== AUTHENTICATION ============
-// =======================================
-
-app.get('/login', (req, res) => {
-    res.render('login');
-});
-
-app.get('/register',(req, res) => {
-    res.render('register');
-});
-
-app.post('/register', (req, res) => {
-    const { fname, lname, instagram, email, password, password2, role } = req.body;
-    let errors = [];
-
-
-    if(!fname || !lname || !email || !password || !password2) {
-        errors.push({ msg: 'Please fill all fields '});
-    }
-
-    if(password != password2){
-        errors.push({ msg: 'Passwords do not match'});
-    }
-
-    if(errors.length > 0){
-        res.render('register', {errors, fname, lname, email, password, password2, instagram, role});
-    } else {
-        User.findOne({email: email})
-            .then(user => {
-                if(user) {
-                    errors.push({ msg: 'Email already registered'});
-                    res.render('register', {errors, fname, lname, email, password, password2, instagram, role});
-                } else {
-                    const newUser = new User({ fname: fname, lname: lname, email: email, password: password, instagram: instagram, role: role});
-
-                    bcrypt.genSalt(10, (err, salt) => 
-                        bcrypt.hash(newUser.password, salt, (err, hash) => {
-                            if(err) throw err;
-
-                            newUser.password = hash;
-                            newUser.save()
-                                .then(user => {
-                                    res.redirect('/login');
-                                })
-                                .catch(err => console.log(err));
-                        }));
-                }
-            })
-    }
-});
-
-app.post('/login', (req, res, next) => {
-    passport.authenticate('local',{
-        successRedirect: '/admin',
-        failureRedirect: '/login'
-    })(req, res, next);
-});
-
-app.get('/logout', (req, res) => {
-    req.logout();
-    res.redirect('/photographs');
-});
-
-// =======================================
 
 app.get('/', (req, res) =>{
     res.render('home');
