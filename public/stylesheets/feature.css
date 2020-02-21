@@ -6,3 +6,10 @@
     margin-bottom: 3px;
     margin-left: 2vw;
 }
+
+
+@media only screen and (max-width: 992px){
+    .input-file{
+        margin-left: 4.5vw;
+    }
+}

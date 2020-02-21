@@ -7,6 +7,9 @@ html{
     scroll-behavior: smooth;
 }
 
+textarea{ 
+    resize: none;
+}
 
 .welcomeText{
     text-align: center;
@@ -368,7 +371,7 @@ html{
     }
 
     .form-holder{
-        width: 80vw;
+        width: 90vw;
     }
 }
 
