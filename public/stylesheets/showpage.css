@@ -34,10 +34,10 @@ ul li a:hover{
 
 .brand img{
     position: absolute;
-    top: 3%;
+    top: 2%;
     left: 5%;
-    max-height: 7vh;
-    max-width: 15vw;
+    max-height: 8vh;
+    max-width: 17vw;
 }
 
 .toggle{
@@ -240,6 +240,10 @@ ul li a:hover{
     .heading h2{
         font-size: 25px;
     }
+
+    .moreHeight{
+        height: 35vh;
+    }
 }
 
 @media only screen and (max-width: 768px){
@@ -292,6 +296,11 @@ ul li a:hover{
     .active{
         display: block;
     }
+
+    .brand img{
+        max-height: 10vh;
+        max-width: 20vw;
+    }
 }
 
 @media only screen and (max-width: 992px){
@@ -313,5 +322,10 @@ ul li a:hover{
 
     .form-holder-new-post{
         width: 90vw;
+    }
+
+    .brand img{
+        max-height: 10vh;
+        max-width: 20vw;
     }
 }
