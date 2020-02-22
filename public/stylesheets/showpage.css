@@ -46,7 +46,7 @@ ul li a:hover{
     text-align: right;
     box-sizing: border-box;
     color: black;
-    font-size:30px;
+    font-size:40px;
     display: none;
 }
 
@@ -296,45 +296,6 @@ ul li a:hover{
     
     .heading h2{
         font-size: 25px;
-    }
-
-    nav{ 
-        height: 5vh;
-        padding: 1vh 2vw;
-    }
-
-    .toggle{
-        display: block;
-    }
-
-    ul{ 
-        display: none;
-        width: 100vw;
-    }
-
-    ul li{
-        display: block;
-    }
-
-    ul li:hover{
-        animation: zoomNone 1s infinite;
-    }
-
-    ul li i{
-        margin-left: 25vw;
-    }
-
-    .moreHeight{
-        height: 50vh;
-    }
-
-    .active{
-        display: block;
-    }
-
-    .brand img{
-        max-height: 8vh;
-        max-width: 16vw;
     }
 }
 
