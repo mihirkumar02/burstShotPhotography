@@ -36,8 +36,8 @@ ul li a:hover{
     position: absolute;
     top: 2%;
     left: 5%;
-    max-height: 8vh;
-    max-width: 17vw;
+    max-height: 10vh;
+    max-width: 20vw;
 }
 
 .toggle{
@@ -240,29 +240,6 @@ ul li a:hover{
     .heading h2{
         font-size: 25px;
     }
-
-    .moreHeight{
-        height: 35vh;
-    }
-}
-
-@media only screen and (max-width: 768px){
-    .feature-image{
-        max-width: 50%;
-    }
-
-    .rightshift{
-        text-align: center;
-    }
-
-    .leftshift{
-        text-align: center;
-    }
-    
-    .heading h2{
-        font-size: 25px;
-    }
-
     nav{ 
         height: 5vh;
         padding: 1vh 2vw;
@@ -286,11 +263,11 @@ ul li a:hover{
     }
 
     ul li i{
-        margin-left: 35vw;
+        margin-left: 25vw;
     }
 
     .moreHeight{
-        height: 45vh;
+        height: 40vh;
     }
 
     .active{
@@ -298,8 +275,26 @@ ul li a:hover{
     }
 
     .brand img{
-        max-height: 10vh;
-        max-width: 20vw;
+        max-height: 8vh;
+        max-width: 16vw;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .feature-image{
+        max-width: 50%;
+    }
+
+    .rightshift{
+        text-align: center;
+    }
+
+    .leftshift{
+        text-align: center;
+    }
+    
+    .heading h2{
+        font-size: 25px;
     }
 }
 
