@@ -2,14 +2,19 @@ const express = require('express');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const methodOverride = require('method-override');
+const session = require('express-session');
 const path = require('path');
 const multer = require('multer');
+const bcrypt = require('bcryptjs');
+const User = require('./models/user');
 const Post = require('./models/post');
 const Mail = require('./models/mail');
 const Feature = require('./models/feature');
-
+const { isAdmin } = require('./config/auth');
 const app = express();
 
+// Passport config
+require('./config/passport')(passport);
 
 //  ========== DB CONFIG ==========
 const db = require('./config/keys').MongoURI;
@@ -25,6 +30,28 @@ app.use(express.static("./public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 
+
+// Express Session middleware
+app.use(session({
+    secret: 'Secret message',
+    resave: true,
+    saveUninitialized: true
+}));
+
+// Passport middleware (Always after express session middleware)
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Global variables
+app.use(function(req, res, next) {
+    res.locals.currentUser = req.user;
+    /*
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    res.locals.error = req.flash('error');
+    */
+    next();
+});
 
 
 const PORT = process.env.PORT || 3000;
@@ -108,12 +135,12 @@ app.get('/photographs', (req, res) => {
     });
 });
 
-app.get('/photographs/new', (req, res) => {
+app.get('/photographs/new', isAdmin, (req, res) => {
     res.render('photographs/new');
 });
 
 
-app.post('/photographs', (req, res) => {
+app.post('/photographs', isAdmin, (req, res) => {
     adminUpload(req, res, (err) => {
         if(err){
             console.log('Could not upload!');
@@ -219,6 +246,99 @@ app.post('/feature', (req, res) => {
         }
     });
 });
+
+
+// ============= AUTHENTICATION ==========
+
+app.get("/users/login", (req, res) => res.render("login"));
+app.get("/users/register", (req, res)=> res.render("register"));
+
+
+// Register Handling
+
+app.post('/users/register', function(req, res){
+    const { fname, lname, email, password, instagram, role } = req.body;
+    
+    /*let errors = [];
+
+    // Check required fields
+
+    if (!fname || !lname || !email || !password || !password2 || !contact) {
+        errors.push({ msg: 'Please fill all fields '});
+    }
+    // For faculties, check if access code matches
+    
+     if(code != 'edu123cafe'){
+        errors.push({ msg: 'Incorrect Access Code!' });
+    }
+    
+
+    // Check passwords match
+
+    if(password != password2) {
+        errors.push({ msg: 'Passwords do not match' });
+    }
+
+    // Check password length
+    if(password.length < 6){
+        errors.push({msg: 'Password should be atleast 6 characters'});
+    }
+
+    if(contact.length != 10){
+        errors.push({msg: 'Contact number should be 10 digits long'});
+    }
+
+    if(errors.length > 0) {
+        res.render('register', { errors, fname, lname, email, password, password2, contact, website, about, interests, city, country, role});
+    } else {*/
+        
+        // Validation passed, now...
+User.findOne({ email: email })
+    .then(user => {
+        if(user) {
+            //errors.push({ msg: 'Email is already registered '});
+            //User exists
+            res.render('register', { fname, lname, email, password, instagram, role});
+        } else {
+            const newUser = new User({
+                fname: fname, lname: lname, email: email, password: password,instagram: instagram, role: role
+            })
+            // Hash password
+            bcrypt.genSalt(10, (err, salt) => 
+                bcrypt.hash(newUser.password, salt, (err, hash) => {
+                    if(err) throw err
+                    // Set password to hashed
+                    newUser.password = hash;
+                    newUser.save()
+                        .then(user => {
+                            //req.flash('success_msg', 'You are now registered and can log in.');
+                            res.redirect('/users/login');
+                        })
+                        .catch(err => console.log(err));
+            }));
+        }
+    });
+});
+
+
+// Login handling
+app.post('/users/login', (req, res, next) => {
+    passport.authenticate('local', {
+        successRedirect: '/photographs',
+        failureRedirect: '/users/login',
+        //failureFlash: true
+    })(req, res, next);
+});
+
+// Logout handling
+app.get('/logout', (req, res)=>{
+    req.logout();
+    //req.flash('success_msg', 'You are logged out!');
+    res.redirect('/users/login');
+});
+
+
+// ========================================
 
 // ======= ERROR 404 =======
 app.get('*', (req, res) => {

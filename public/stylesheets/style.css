@@ -189,6 +189,44 @@ textarea{
     transition-duration: 0.5s;
 }
 
+#user-forms{
+    padding: 10vh 0;
+    text-align: center;
+    border-bottom: 5px double white;
+    background-color: black;
+}
+
+#user-forms h1{
+    font-weight: bold;
+    font-size: 40px;
+    color: yellow;
+}
+
+#user-forms p{
+    color: lightcoral;
+}
+
+#user-forms p a{
+    color: black;
+}
+
+#user-forms p a:hover{
+    text-decoration: none;
+}
+
+.form-holder-user{
+    margin: 0 auto;
+    width: 40vw;
+    padding: 50px 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.form-holder-user:hover{
+    box-shadow: 0 0 5px 2px white;
+    transition-duration: 0.5s;
+}
 
 #about{
     text-align: center;
@@ -239,7 +277,7 @@ textarea{
 }
 
 .form-container{
-    padding: 20vh 0 10vh 0;
+    padding: 10vh 0 10vh 0;
 }
 
 .form-holder{
@@ -334,6 +372,10 @@ textarea{
 @media only screen and (max-width: 600px){
     .welcomeText h1{
         font-size: 25px;
+    }
+
+    .button-success{
+        font-size: 12px;
     }
 
     #feature{

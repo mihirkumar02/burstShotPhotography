@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mihir Kumar Singh">
+    <meta name="keywords" content="pic, photo, photography, image, upload, burstshot">
+    <meta name="description" content="A website to display the pictures from my Instagram profile">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/showpage.css">
+    <link rel="stylesheet" href="../stylesheets/feature.css">
+
+    <title>Login | BurstShot Photography</title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+
+    <section id="user-forms">
+        <a class="button button-back" href="/photographs"><i class="material-icons">arrow_back</i></a>
+        <h1>LOGIN</h1>
+        <div class="container form-container">
+            <div class="form-holder-user">
+                <form action="/users/login" method="POST">
+                    <div class="row">
+                        <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="input-field"
+                        placeholder="Enter Email.."
+                      />
+                    </div>
+                    <div class="row">
+                        <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="input-field"
+                        placeholder="Enter Password"
+                      />
+                    </div>
+
+                    <button class="button button-submit">Login</button>
+                </form>
+                <p class="lead mt-4">
+                    No Account? <a href="/users/register">Register</a>
+                </p>
+            </div>     
+        </div>    
+    </section>   
+
+    <%- include('./partials/footer') %>
