@@ -240,6 +240,7 @@ ul li a:hover{
     .heading h2{
         font-size: 25px;
     }
+
     nav{ 
         height: 5vh;
         padding: 1vh 2vw;
@@ -267,7 +268,7 @@ ul li a:hover{
     }
 
     .moreHeight{
-        height: 40vh;
+        height: 30vh;
     }
 
     .active{
@@ -295,6 +296,45 @@ ul li a:hover{
     
     .heading h2{
         font-size: 25px;
+    }
+
+    nav{ 
+        height: 5vh;
+        padding: 1vh 2vw;
+    }
+
+    .toggle{
+        display: block;
+    }
+
+    ul{ 
+        display: none;
+        width: 100vw;
+    }
+
+    ul li{
+        display: block;
+    }
+
+    ul li:hover{
+        animation: zoomNone 1s infinite;
+    }
+
+    ul li i{
+        margin-left: 25vw;
+    }
+
+    .moreHeight{
+        height: 45vh;
+    }
+
+    .active{
+        display: block;
+    }
+
+    .brand img{
+        max-height: 8vh;
+        max-width: 16vw;
     }
 }
 
