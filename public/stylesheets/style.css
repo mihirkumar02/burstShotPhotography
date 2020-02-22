@@ -50,22 +50,22 @@ textarea{
   /* Animations*/
   
   .slideshow li:nth-child(1) {
-    background-image: url('../img/1.jpg');
+    background-image: url('../img/1.webp');
   }
   .slideshow li:nth-child(2) {
-    background-image: url('../img/2.jpg');
+    background-image: url('../img/2.webp');
     animation-delay: 5s;
   }
   .slideshow li:nth-child(3) {
-    background-image: url('../img/3.JPG');
+    background-image: url('../img/3.webp');
     animation-delay: 10s;
   }
   .slideshow li:nth-child(4) {
-    background-image: url('../img/4.jpg');
+    background-image: url('../img/4.webp');
     animation-delay: 15s;
   }
   .slideshow li:nth-child(5) {
-    background-image: url('../img/5.jpg');
+    background-image: url('../img/5.webp');
     animation-delay: 20s;
   }
   

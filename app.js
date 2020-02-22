@@ -112,6 +112,7 @@ app.get('/photographs/new', (req, res) => {
     res.render('photographs/new');
 });
 
+
 app.post('/photographs', (req, res) => {
     adminUpload(req, res, (err) => {
         if(err){
@@ -147,14 +148,14 @@ app.get('/photographs/:post_id', (req, res) => {
     });
 });
 
-
+/*
 app.get('/photographs/requests', (req, res) => {
-    Feature.find({}, (err, posts) => {
-        if(err) {
+    Feature.find({}, (err, foundPosts) =>{ 
+        if(err){
             console.log(err);
         } else {
             const showPosts = [];
-            posts.forEach(function(post){
+            foundPosts.forEach(function(post){
                 if(!post.featured){
                     showPosts.push(post);
                 }
@@ -163,6 +164,20 @@ app.get('/photographs/requests', (req, res) => {
         }
     });
 });
+
+<li><a href="/photographs/requests"><i class="fa fa-plus"></i> Requests</a></li>
+
+// Download option for Admin
+app.get('/photographs/:post_id', (req, res) =>{
+    Feature.findById(req.params.post_id, (err, post) => {
+        if(err){
+            console.log(err);
+        } else {
+            res.download(post.imagePath);
+        }
+    });
+});
+*/
 
 // ======= CONTACT ME =======
 
@@ -201,17 +216,6 @@ app.post('/feature', (req, res) => {
                     })
                     .catch(err => console.log(err));
             }
-        }
-    });
-});
-
-// Download option for Admin
-app.get('/photographs/:post_id', (req, res) =>{
-    Feature.findById(req.params.post_id, (err, post) => {
-        if(err){
-            console.log(err);
-        } else {
-            res.download(post.imagePath);
         }
     });
 });
