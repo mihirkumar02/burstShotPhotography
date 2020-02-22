@@ -1,39 +1,56 @@
-.myNav{
+nav{
     padding: 3vh 5vw;
     height: 15vh;
     overflow: hidden;
 }
 
-.brand img{
-    max-height: 7vh;
-    max-width: 15vw;
-}
-
-.links{
+ul{ 
     float: right;
-    list-style-type: none;
 }
 
-.links a{
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
+ul li{
+    list-style: none;
+    display: inline-block;
     padding: 15px;
-    float: left;
     font-size: 20px;
-    color: black;
 }
 
-.links a:hover{
-    text-decoration: none;
+ul li:hover{
     font-size: 30px;
     animation: zoomIn 1s;
 }
 
-.centered-logo{
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    float: left;
+}
+
+ul li a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.brand img{
     position: absolute;
-    left: 20%;
-    top: 4%;
+    top: 3%;
+    left: 5%;
+    max-height: 7vh;
+    max-width: 15vw;
+}
+
+.toggle{
+    width: 100%;
+    padding: 10px 20px 0 20px;
+    text-align: right;
+    box-sizing: border-box;
+    color: black;
+    font-size:30px;
+    display: none;
+}
+
+.centered-logo{
     color: black;
     font-size: 30px;
 }
@@ -187,19 +204,20 @@
     text-align: left;
 }
 
-.links .icon{
-    display: none;
-}
-
 
 @keyframes zoomIn{
     from{ font-size: 20px; }
-    to{ font-size: 30px; }
+    to{ font-size: 25px; }
 }
 
 @keyframes zoomInLogo{
     from{ font-size: 30px; }
     to{ font-size: 35px; }
+}
+
+@keyframes zoomNone{
+    from { font-size: 20px;}
+    to {font-size: 20px;}
 }
 
 @media only screen and (max-width: 600px){
@@ -240,6 +258,40 @@
     .heading h2{
         font-size: 25px;
     }
+
+    nav{ 
+        height: 5vh;
+        padding: 1vh 2vw;
+    }
+
+    .toggle{
+        display: block;
+    }
+
+    ul{ 
+        display: none;
+        width: 100vw;
+    }
+
+    ul li{
+        display: block;
+    }
+
+    ul li:hover{
+        animation: zoomNone 1s infinite;
+    }
+
+    ul li i{
+        margin-left: 35vw;
+    }
+
+    .moreHeight{
+        height: 45vh;
+    }
+
+    .active{
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 992px){
@@ -261,39 +313,5 @@
 
     .form-holder-new-post{
         width: 90vw;
-    }
-
-    .links a{
-        display: none;
-    }
-
-    .links a.icon{
-        float: right;
-        display: block;
-    }
-}
-
-
-@media only screen and (max-width: 992px){
-    .myNav{
-        min-height: 20vh;
-    }
-
-    .links.responsive {
-        position: relative;
-    }
-
-    .links.responsive a.icon{
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
-    .links.responsive a{
-        margin-top: 15px;
-        color: black;
-        float: none;
-        display: block;
-        text-align: left;
     }
 }
