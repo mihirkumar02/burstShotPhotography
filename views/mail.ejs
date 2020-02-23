@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0">
+    <meta name="author" content="Mihir Kumar Singh">
+    <meta name="keywords" content="pic, photo, photography, image, upload, burstshot">
+    <meta name="description" content="A website to display the pictures from my Instagram profile">
+
+    <link rel="shortcut icon" type="image/PNG" href="../img/favicon.PNG">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <title>Connect to People | BurstShot Photography</title>
+</head>
+
+<body>
+    <%- include('./partials/nav') %>
+    <section id="post">
+        <div class="container">
+            <% if(error && error.length > 0){%>
+            <div class="alert alert-danger">
+              <h4> <%= error %> </h4>
+            </div>
+            <% } %>
+          
+            <% if(success && success.length > 0){%>
+            <div class="alert alert-success">
+              <h4> <%= success %> </h4>
+            </div>
+            <% } %>
+        </div>
+        <div class="container">
+            <a class="button-back" href="/photographs"><i class="material-icons">arrow_back</i></a>
+            <h2>MESSAGES</h2>
+            <div class="row">
+                <% mails.forEach(function(mail){ %>
+                    <div class="col-md-4 col-sm-6 message-container">
+                        <div class="from">
+                            <h3><span>From:</span> <%= mail.name %></h3>
+                        </div>
+                        <hr>
+                        <div class="message">
+                            <h3><%= mail.message %></h3>
+                        </div>
+                        <div class="message-sender">
+                            <span class="instagram post-icon mail-icons"><a target="_blank" href="https://www.<%= mail.email %>"><i class="fa fa-envelope"></i></a></span>
+                            <span class="instagram"><a target="_blank" href="https://www.instagram.com/<%= mail.instagram %>/"><i class="fa fa-instagram"></i></a></span>
+                        </div>  
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+
+<%- include('./partials/footer') %>

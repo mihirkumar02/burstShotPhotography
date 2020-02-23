@@ -183,19 +183,13 @@ app.get('/requests', isAdmin, (req, res) => {
         if(err){
             console.log(err);
         } else {
-            const showPosts = [];
-            foundPosts.forEach(function(post){
-                if(!post.featured){
-                    showPosts.push(post);
-                }
-            });
-            res.render('photographs/requests', {posts: showPosts});
+            res.render('photographs/requests', {posts: foundPosts});
         }
     });
 });
 
 // Download option for Admin
-app.get('/requests/:post_id', (req, res) =>{
+app.get('/requests/:post_id', isAdmin, (req, res) =>{
     Feature.findById(req.params.post_id, (err, post) => {
         if(err){
             console.log(err);
@@ -252,15 +246,29 @@ app.post('/feature', (req, res) => {
 
 // Approve posts for featuring
 
-app.post('/feature/:post_id', (req, res) => {
+app.post('/feature/:post_id', isAdmin, (req, res) => {
     Feature.findByIdAndUpdate(req.params.post_id, {featured: true}, (err, post) =>{
         if(err){
             console.log(err);
         } else {
-            res.redirect('/feature');
+            req.flash("success", "Post checked for feature!");
+            res.redirect('/requests');
         }
     });
 });
+
+// Delete posts once downloaded
+
+app.delete('/feature/:post_id', isAdmin, (req, res) =>{
+    Feature.findByIdAndRemove(req.params.post_id, (err)=>{
+        if(err){
+            console.log(err);
+        } else {
+            req.flash("success", "Post should be on Instagram now!");
+            res.redirect('/requests');
+        }
+    });
+})
 
 // =====================================
 // ======== See Featured Posts =========
@@ -281,6 +289,21 @@ app.get('/feature', (req, res) =>{
         }
     });
 });
+
+// =================================
+// =========== MESSAGES ============
+// =================================
+
+app.get('/messages', isAdmin, (req, res) =>{
+    Mail.find({}, (err, foundMails) =>{
+        if(err){
+            console.log(err);
+        } else {
+            res.render('mail', {mails: foundMails});
+        }
+    });
+});
+
 
 // ============= AUTHENTICATION ==========
 

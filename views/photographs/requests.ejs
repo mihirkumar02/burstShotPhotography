@@ -20,9 +20,22 @@
     <%- include('../partials/nav') %>
 
         <section id="feature-posts">
+            <div class="container">
+                <% if(error && error.length > 0){%>
+                <div class="alert alert-danger">
+                  <h3> <%= error %> </h3>
+                </div>
+                <% } %>
+              
+                <% if(success && success.length > 0){%>
+                <div class="alert alert-success">
+                  <h3> <%= success %> </h3>
+                </div>
+                <% } %>
+            </div>
             <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
             <a class="button-back" href="/photographs"><i class="material-icons">arrow_back</i></a>
-            <h2>FEATURE REQUESTS</h2>
+                <h2>FEATURE REQUESTS</h2>
             <div class="container">
                 <div class="row">
                     <% posts.forEach(function(post){ %>
@@ -31,12 +44,19 @@
                             <h4><%= post.photographer %></h4>
                             <h4><%= post.instagram %></h4>
                             <h4><%= post.location %></h4>
+                            <h4><%= post.caption %></h4>
                             <form action="/requests/<%= post._id %>" method="GET">
                                 <button class="button"><i class="material-icons">file_download</i></button>
                             </form>
-                            <form action="/feature/<%= post._id %>" method="POST">
-                                <button class="button"><i class="material-icons">check</i></button>
-                            </form>
+                            <% if(!post.featured) { %>
+                                <form action="/feature/<%= post._id %>" method="POST">
+                                    <button class="button"><i class="material-icons">check</i></button>
+                                </form>
+                            <% } else { %>
+                                <form action="/feature/<%= post._id %>?_method=DELETE" method="POST">
+                                    <button class="button"><i class="material-icons">delete</i></button>
+                                </form>
+                            <% } %>
                         </div>
                     <% }); %>
                 </div>
