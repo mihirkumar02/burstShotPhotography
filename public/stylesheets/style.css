@@ -101,10 +101,10 @@ textarea{
     box-shadow: 0 1px 1px 2px white;
     top: 5%;
     /* to make rounded button */
-    width: 70px;
-    height: 70px;
-    border-radius: 35px;
-    font-size: 35px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 25px;
     
     background-color: yellow;
     padding: 10px;
@@ -136,6 +136,10 @@ textarea{
 
 .rightside{
     right: 5%;
+}
+
+.middle{
+    right: 18%;
 }
 
 .sideButton:hover{
@@ -421,8 +425,7 @@ textarea{
     }
 }
 
-@media only screen and (max-width: 992px){
-
+@media only screen and (max-width: 992px){    
     .me{
         width: 30%;
         height: 30%;
@@ -434,5 +437,29 @@ textarea{
 
     .form-holder-user{
         width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .middle{
+        right: 22%;
+    }
+}
+
+@media only screen and (min-width: 601px){
+    .middle{
+        right: 14%;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .middle{
+        right: 12%;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .middle{
+        right: 10%;
     }
 }

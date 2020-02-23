@@ -41,6 +41,7 @@ nav ul li a:hover{
 }
 
 .toggle{
+    cursor: pointer;
     width: 100%;
     padding: 10px 20px 0 20px;
     text-align: right;
@@ -168,7 +169,6 @@ nav ul li a:hover{
     margin-right: 1vw;
 }
 
-
 #show{
     color: white;
     padding: 5vh 0 10vh 0;
@@ -225,6 +225,11 @@ nav ul li a:hover{
 }
 
 @media only screen and (max-width: 600px){
+    .images i{
+        padding-bottom: 10px;
+        border-bottom: 5px double lightcoral;
+    }
+
     .rightshift{
         text-align: center;
     }
@@ -279,11 +284,11 @@ nav ul li a:hover{
 
 @media only screen and (max-width: 768px){
     .images{
-        min-height: 330px;
+        min-height: 380px;
     }
 
     .feature-image{
-        max-width: 50%;
+        max-width: 55%;
     }
     
     .rightshift{

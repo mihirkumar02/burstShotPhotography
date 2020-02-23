@@ -7,6 +7,39 @@
     margin-left: 2vw;
 }
 
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 99; 
+    border: none; 
+    outline: none;
+    background-color: white; 
+    color: black; 
+    cursor: pointer;
+    padding: 10px 15px; 
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px lightcoral;
+    font-size: 20px; 
+}
+
+#myBtn:hover {
+    box-shadow: none;
+}
+
+/*
+@keyframes fadeIn{
+    from { display: none;}
+    to { display: block;}
+}
+
+@keyframes fadeOut{
+    from { display: block;}
+    to { display: none;}
+}
+*/
+
 @media only screen and (max-width: 768px){
     .input-file{
         margin-left: 5vw;
