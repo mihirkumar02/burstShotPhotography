@@ -267,7 +267,7 @@ app.post('/feature/:post_id', (req, res) => {
 // =====================================
 
 app.get('/feature', (req, res) =>{
-    Feature.find({}, (err, foundPosts) =>{
+    Post.find({}, (err, foundPosts) =>{
         if(err){
             console.log(err);
         } else {
