@@ -238,7 +238,6 @@ app.post('/feature', (req, res) => {
                 });
                 feature.save()
                     .then(() => {
-                        console.log("Sent to Admin!");
                         res.redirect('/photographs');
                     })
                     .catch(err => console.log(err));

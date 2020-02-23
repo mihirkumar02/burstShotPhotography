@@ -413,6 +413,10 @@ textarea{
     }
 
     .form-holder{
+        width: 100vw;
+    }
+
+    .form-holder-user{
         width: 90vw;
     }
 }
@@ -425,6 +429,10 @@ textarea{
     }
 
     .form-holder{
+        width: 10s0vw;
+    }
+
+    .form-holder-user{
         width: 90vw;
     }
 }

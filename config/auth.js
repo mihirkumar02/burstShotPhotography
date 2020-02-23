@@ -1,5 +1,3 @@
-const Post = require('../models/post');
-
 module.exports = {
     isAdmin: function(req, res, next){
         if(req.isAuthenticated()){

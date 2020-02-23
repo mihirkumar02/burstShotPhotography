@@ -7,9 +7,8 @@
     margin-left: 2vw;
 }
 
-
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 768px){
     .input-file{
-        margin-left: 4.5vw;
+        margin-left: 5vw;
     }
 }

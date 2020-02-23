@@ -4,30 +4,30 @@ nav{
     overflow: hidden;
 }
 
-ul{ 
+nav ul{ 
     float: right;
 }
 
-ul li{
+nav ul li{
     list-style: none;
     display: inline-block;
     padding: 15px;
     font-size: 20px;
 }
 
-ul li:hover{
+nav ul li:hover{
     font-size: 30px;
     animation: zoomIn 1s;
 }
 
-ul li a{
+nav ul li a{
     text-decoration: none;
     color: black;
     font-weight: bold;
     float: left;
 }
 
-ul li a:hover{
+nav ul li a:hover{
     text-decoration: none;
     color: black;
 }
@@ -134,6 +134,8 @@ ul li a:hover{
 .feature-image{
     max-width: 100%;
     max-height: 50%;
+    box-shadow: 0 0 3px 3px white;
+    padding: 5px;
 }
 
 .images{
@@ -221,14 +223,6 @@ ul li a:hover{
 }
 
 @media only screen and (max-width: 600px){
-    .feature-image{
-        max-width: 50%;
-    }
-
-    .images{
-        min-height: 350px;
-    }
-
     .rightshift{
         text-align: center;
     }
@@ -250,25 +244,25 @@ ul li a:hover{
         display: block;
     }
 
-    ul{ 
+    nav ul{ 
         display: none;
         width: 100vw;
     }
 
-    ul li{
+    nav ul li{
         display: block;
     }
 
-    ul li:hover{
+    nav ul li:hover{
         animation: zoomNone 1s infinite;
     }
 
-    ul li i{
+    nav ul li i{
         margin-left: 25vw;
     }
 
     .moreHeight{
-        height: 35vh;
+        height: 25vh;
     }
 
     .active{
@@ -282,10 +276,14 @@ ul li a:hover{
 }
 
 @media only screen and (max-width: 768px){
+    .images{
+        min-height: 400px;
+    }
+
     .feature-image{
         max-width: 50%;
     }
-
+    
     .rightshift{
         text-align: center;
     }
@@ -300,10 +298,6 @@ ul li a:hover{
 }
 
 @media only screen and (max-width: 992px){
-    .feature-image{
-        max-width: 55%;
-    }
-
     .rightshift{
         text-align: center;
     }
