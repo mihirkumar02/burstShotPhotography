@@ -216,9 +216,9 @@ app.post('/mail', (req, res) => {
         name: name, email: email,instagram: instagram, message: message
     });
     mail.save()
-        .then(() => req.flash("error", "Thank you! I'll reply soon!"))
+        .then(() => req.flash("success", "Thank you! I hope you like the photos.."))
         .catch(err => req.flash("error", "Something went wrong!"));
-    res.redirect('/photographs');
+    res.redirect('/');
 });
 
 

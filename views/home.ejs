@@ -118,6 +118,19 @@
     </section>
 
     <section id="contact">
+        <div class="container">
+            <% if(error && error.length > 0){%>
+            <div class="alert alert-danger">
+              <h4> <%= error %> </h4>
+            </div>
+            <% } %>
+          
+            <% if(success && success.length > 0){%>
+            <div class="alert alert-success">
+              <h4> <%= success %> </h4>
+            </div>
+            <% } %>
+        </div>
         <h1>CONTACT ME</h1>
         <div class="container form-container">
             <div class="row">
