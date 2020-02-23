@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="../stylesheets/style.css">
-    <title>All Photos | BurstShot Photography</title>
+    <title>Featured Photos | BurstShot Photography</title>
 </head>
 
 <body>
@@ -34,17 +34,17 @@
         </div>
         <div class="container">
             <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
-            <a class="button-back rightside" href="/feature"><i class="fa fa-file-image-o"></i></a>
+            <a class="button-back rightside" href="/photographs"><i class="fa fa-image"></i></a>
             <div class="heading">
-                <h2>MY POSTS</h2>
+                <h2>FEATURED POSTS</h2>
             </div>
             <div class="row">
                 <% posts.forEach(function(post){ %>
-                    <div class="col-md-3 col-sm-6 images">
-                        <img class="feature-image" src="/admin/<%= post.image %>" alt="Image">
+                    <div class="col-md-3 col-sm-6 images-featured">
+                        <img class="feature-image" src="/feature/<%= post.image %>" alt="Image">
                         <h4 class="location"><%= post.location %></h4>
                         <span class="instagram post-icon"><a target="_blank" href="<%= post.instagram %>"><i class="fa fa-instagram"></i></a></span>
-                        <span class="instagram"><a href="/photographs/<%= post._id %>"><i class="fa fa-info-circle"></i></a></span>
+                        <span class="instagram"><a href="/feature/<%= post._id %>"><i class="fa fa-info-circle"></i></a></span>
                     </div>
                 <% }); %>
             </div>

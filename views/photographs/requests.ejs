@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="../stylesheets/style.css">
-    <link rel="stylesheet" href="../stylesheets/showpage.css">
-    <link rel="stylesheet" href="../stylesheets/feature.css">
     <title>Feature Requests | BurstShot Photography</title>
 </head>
 
@@ -23,7 +21,7 @@
 
         <section id="feature-posts">
             <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
-            <a href="/photographs"><i class="material-icons">arrow_back</i></a>
+            <a class="button-back" href="/photographs"><i class="material-icons">arrow_back</i></a>
             <h2>FEATURE REQUESTS</h2>
             <div class="container">
                 <div class="row">
@@ -33,8 +31,11 @@
                             <h4><%= post.photographer %></h4>
                             <h4><%= post.instagram %></h4>
                             <h4><%= post.location %></h4>
-                            <form action="/photographs/<%= post._id %>" method="GET">
-                                <button><i class="material-icons">file_download</i></button>
+                            <form action="/requests/<%= post._id %>" method="GET">
+                                <button class="button"><i class="material-icons">file_download</i></button>
+                            </form>
+                            <form action="/feature/<%= post._id %>" method="POST">
+                                <button class="button"><i class="material-icons">check</i></button>
                             </form>
                         </div>
                     <% }); %>

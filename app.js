@@ -178,7 +178,7 @@ app.get('/photographs/:post_id', (req, res) => {
 });
 
 
-app.get('/photographs/:id/requests', (req, res) => {
+app.get('/requests', isAdmin, (req, res) => {
     Feature.find({}, (err, foundPosts) =>{ 
         if(err){
             console.log(err);
@@ -195,7 +195,7 @@ app.get('/photographs/:id/requests', (req, res) => {
 });
 
 // Download option for Admin
-app.get('/photographs/:post_id', (req, res) =>{
+app.get('/requests/:post_id', (req, res) =>{
     Feature.findById(req.params.post_id, (err, post) => {
         if(err){
             console.log(err);
@@ -204,6 +204,7 @@ app.get('/photographs/:post_id', (req, res) =>{
         }
     });
 });
+
 
 
 // ======= CONTACT ME =======
@@ -249,6 +250,37 @@ app.post('/feature', (req, res) => {
     });
 });
 
+// Approve posts for featuring
+
+app.post('/feature/:post_id', (req, res) => {
+    Feature.findByIdAndUpdate(req.params.post_id, {featured: true}, (err, post) =>{
+        if(err){
+            console.log(err);
+        } else {
+            res.redirect('/feature');
+        }
+    });
+});
+
+// =====================================
+// ======== See Featured Posts =========
+// =====================================
+
+app.get('/feature', (req, res) =>{
+    Feature.find({}, (err, foundPosts) =>{
+        if(err){
+            console.log(err);
+        } else {
+            const showPosts = [];
+            foundPosts.forEach(function(post){
+                if(post.featured){
+                    showPosts.push(post);
+                }
+            });
+            res.render('photographs/features', {posts: showPosts});
+        }
+    });
+});
 
 // ============= AUTHENTICATION ==========
 
