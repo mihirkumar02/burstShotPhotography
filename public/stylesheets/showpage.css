@@ -196,6 +196,8 @@ nav ul li a:hover{
 .show-image{
     width: 50%;
     height: 50%;
+    box-shadow: 0 0 3px 3px white;
+    padding: 5px;
 }
 
 .rightshift{
