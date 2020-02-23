@@ -1,1 +1,875 @@
-*{font-family:'Roboto',sans-serif;max-width:100vw}html{scroll-behavior:smooth}textarea{resize:none}nav{padding:3vh 5vw;height:15vh;overflow:hidden}nav ul{float:right}nav ul li{list-style:none;display:inline-block;padding:15px;font-size:20px}nav ul li:hover{font-size:30px;animation:zoomIn 1s}nav ul li a{text-decoration:none;color:#000;font-weight:700;float:left}nav ul li a:hover{text-decoration:none;color:#000}.brand img{position:absolute;top:2%;left:5%;max-height:10vh;max-width:20vw}.toggle{cursor:pointer;width:100%;padding:10px 20px 0;text-align:right;box-sizing:border-box;color:#000;font-size:40px;display:none}.centered-logo{color:#000;font-size:30px}.centered-logo a{color:#000;font-size:30px}.centered-logo a:hover{text-decoration:none;animation:zoomInLogo 1s infinite}.form-bg{background-color:#000;color:#ffffe0}#post{box-shadow:0 0 6px 2px #000;padding:10vh 0 15vh;text-align:center;background-color:#000;border-bottom:5px double #fff}#post h2{font-weight:700;color:#ff0}#feature-posts{box-shadow:0 0 6px 2px #000;padding:10vh 0 15vh;text-align:center;background-color:#000;border-bottom:5px double #fff;color:#ff0}#feature-posts h4{color:#ff0}.button-back{color:#000;background-color:#fff;padding:10px;margin-left:5px;height:40px;width:40px;border-radius:50%;font-size:20px}.form-holder-new-post{margin:0 auto;width:40vw;padding:50px 10px;border-radius:4px;background-color:#fff;box-shadow:0 0 2px 3px #fff}.form-holder-new-post:hover{box-shadow:0 0 5px 2px #000;transition-duration:.5s}.input-file{border:1px solid #000;background-color:#ffffe0;width:90%;padding:10px 5px;margin-bottom:3px;margin-left:2vw}.feature-image{max-width:100%;max-height:50%;box-shadow:0 0 3px 3px #fff;padding:5px}.images{min-height:400px;text-align:center}.images a{text-decoration:none;color:#fff}#display{min-height:50vh;background-color:#000;padding:10vh 0}#display:hover{box-shadow:0 0 8px 2px #000;transition-duration:.5s}.post-icon{margin-right:1vw}.images i{color:#fff;font-size:35px}#show{color:#fff;padding:5vh 0 10vh;min-height:80vh;background-color:#000;border-bottom:5px double #fff}#show h2{color:#ff0}.heading{text-align:center}.caption{text-align:right}.show-box{padding:10vh 0}.show-image{width:50%;height:50%;box-shadow:0 0 3px 3px #fff;padding:5px}.rightshift{text-align:right}.leftshift{text-align:left}.input-file{border:1px solid #000;background-color:#ffffe0;width:90%;padding:10px 5px;margin-bottom:3px;margin-left:2vw}#myBtn{display:none;position:fixed;bottom:20px;right:20px;z-index:99;border:none;outline:none;background-color:#fff;color:#000;cursor:pointer;padding:10px 15px;border-radius:50%;box-shadow:0 0 2px 2px #f08080;font-size:20px}#myBtn:hover{box-shadow:none}.location{color:#ff0}.preload{position:fixed;top:30vh;width:100%;height:100vh;display:flex;justify-content:center;align-items:center;transition:opacity .5s ease}.preload-finish{opacity:0;pointer-events:none}.loadingphoto{height:90px;animation:loadingphoto 1s ease infinite alternate}.welcomeText{text-align:center;z-index:1;position:relative;padding:40vh 0;color:#fff}.slideshow{position:absolute;width:100%;height:100%;top:0;left:0;z-index:-1;list-style:none;margin:0;padding:0}.slideshow li{width:100%;height:100%;position:absolute;top:0;left:0;background-size:cover;background-position:50% 50%;background-repeat:no-repeat;opacity:0;z-index:0;animation:imageAnimation 20s linear infinite}.slideshow li:nth-child(1){background-image:url(../img/1.webp)}.slideshow li:nth-child(2){background-image:url(../img/2.webp);animation-delay:5s}.slideshow li:nth-child(3){background-image:url(../img/3.webp);animation-delay:10s}.slideshow li:nth-child(4){background-image:url(../img/4.webp);animation-delay:15s}.slideshow li:nth-child(5){background-image:url(../img/5.webp);animation-delay:20s}.welcomeBox{margin:0 auto;width:40vw;border-radius:10px;padding:5vh 0;background-color:#000;box-shadow:0 0 2px 3px #000}.sideButton{position:absolute;box-shadow:0 1px 1px 2px #fff;top:5%;width:50px;height:50px;border-radius:25px;font-size:25px;background-color:#ff0;padding:10px;color:#000}.sideInstagram{position:absolute;top:5%;color:#ff0;font-size:40px}.sideInstagram .fa-instagram{color:#eb38a0}.spannedFollow{color:#ff0;position:absolute;font-size:25px;left:5%;top:12%}.leftside{left:5%}.rightside{right:5%}.middle{right:18%}.sideButton:hover{box-shadow:none;background-color:#ff0;transition-duration:1s}.spannedText{color:#ff0}.button{border:none;border-radius:4px;padding:5px;font-size:17px;font-weight:700;color:#ff0;background-color:#000}.button-success:hover{background-color:#ff0;transition-duration:1s;font-weight:700}.welcomeText a{text-decoration:none}.welcomeText a:hover{color:#000}#feature{padding:10vh 0;text-align:center}#feature h1{font-weight:700;font-size:40px}#feature:hover{box-shadow:0 0 8px 2px #fff;transition-duration:.5s}#user-forms{padding:10vh 0;text-align:center;border-bottom:5px double #fff;background-color:#000}#user-forms h1{font-weight:700;font-size:40px;color:#ff0}#user-forms p{color:#f08080}#user-forms p a{color:#000}#user-forms p a:hover{text-decoration:none}.form-holder-user{margin:0 auto;width:40vw;padding:50px 10px;border:1px solid #fff;border-radius:4px;background-color:#fff}.form-holder-user:hover{box-shadow:0 0 5px 2px #fff;transition-duration:.5s}#about{text-align:center;padding:10vh 0;min-height:40vh;background-color:#000;color:#fff}#about h1{font-weight:700;color:#ff0}#about:hover{box-shadow:0 0 8px 2px #000;transition-duration:.5s}.me{height:50%;width:50%;border-radius:50%}.info{margin-top:20px;padding:15vh 0 0}.words{color:#ff0}#contact{padding:10vh 0;text-align:center}#contact h1{font-weight:700;font-size:40px}#contact:hover{box-shadow:0 0 8px 2px #fff;transition-duration:.5s}.form-container{padding:10vh 0}.form-holder{margin:0 auto;width:40vw;padding:50px 10px;border:1px solid #000;border-radius:4px}.form-holder:hover{box-shadow:0 0 5px 2px #000;transition-duration:.5s}.input-field{border:1px solid #000;background-color:#ffffe0;width:90%;padding:10px 5px;margin-bottom:3px}.input-field:focus{outline:none;border:1px dashed #000}#footer{padding:5vh;text-align:center;background-color:#000;color:#fff}.heart{color:red}.mylinks li{list-style-type:none;display:inline;overflow:hidden;margin-right:30px}.mylinks{text-align:center}.mylinks h3{margin-bottom:40px;color:#ff0}.instagram a{color:#eb38a0;font-size:30px}.facebook a{color:#3d75ee;font-size:25px}.linkedin a{color:#b8ceeb;font-size:25px}.gmail a{color:#b6382f;font-size:25px}.showcaseArea{min-height:100vh}.coverImage{text-align:center;border:1px solid #000}.coverImage img{max-width:300px;max-height:200px}@keyframes zoomIn{from{font-size:20px}to{font-size:25px}}@keyframes zoomInLogo{from{font-size:30px}to{font-size:35px}}@keyframes zoomNone{from{font-size:20px}to{font-size:20px}}@keyframes imageAnimation{0%{opacity:0;animation-timing-function:ease-in}10%{opacity:1;animation-timing-function:ease-out}20%{opacity:1}30%{opacity:0}}@keyframes loadingphoto{from{transform:translateY(0)}to{transform:translateY(25px)}}@media only screen and (max-width: 600px){.images i{padding-bottom:10px;border-bottom:5px double #f08080}.rightshift{text-align:center}.leftshift{text-align:center}.heading h2{font-size:25px}nav{height:5vh;padding:1vh 2vw}.toggle{display:block}nav ul{display:none;width:100vw}nav ul li{display:block}nav ul li:hover{animation:zoomNone 1s infinite}nav ul li i{margin-left:25vw}.moreHeight{height:25vh}.active{display:block}.brand img{max-height:8vh;max-width:16vw}.input-file{margin-left:5vw}.welcomeText h1{font-size:25px}.button-success{font-size:12px}#feature{padding:5vh 0}.form-container{padding:5vh 0 10vh}#contact{padding:2vh 0 10vh}.shot{width:60%}.info{padding:5vh 0}.me{width:40%;height:40%}.info h4{font-size:17px}.hooman{width:40%;height:20%}.form-holder{width:100vw}.form-holder-user{width:90vw}}@media only screen and (max-width: 768px){.images{min-height:380px}.feature-image{max-width:55%}.rightshift{text-align:center}.leftshift{text-align:center}.heading h2{font-size:25px}}@media only screen and (max-width: 992px){.me{width:30%;height:30%}.form-holder{width:10s0vw}.form-holder-user{width:90vw}.rightshift{text-align:center}.leftshift{text-align:center}.heading h2{font-size:25px}.form-holder-new-post{width:90vw}.brand img{max-height:10vh;max-width:20vw}}@media only screen and (max-width: 400px){.middle{right:22%}}@media only screen and (min-width: 601px){.middle{right:14%}}@media only screen and (min-width: 769px){.middle{right:12%}}@media only screen and (min-width: 1000px){.middle{right:10%}}
+*{
+    font-family: 'Roboto', sans-serif;
+    max-width: 100vw;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+textarea{ 
+    resize: none;
+}
+
+nav{
+    padding: 3vh 5vw;
+    height: 15vh;
+    overflow: hidden;
+}
+
+nav ul{ 
+    float: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+    font-size: 20px;
+}
+
+nav ul li:hover{
+    font-size: 30px;
+    animation: zoomIn 1s;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    float: left;
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+.brand img{
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    max-height: 10vh;
+    max-width: 20vw;
+}
+
+.toggle{
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 20px 0 20px;
+    text-align: right;
+    box-sizing: border-box;
+    color: black;
+    font-size:40px;
+    display: none;
+}
+
+.centered-logo{
+    color: black;
+    font-size: 30px;
+}
+
+.centered-logo a{
+    color: black;
+    font-size: 30px;
+}
+
+.centered-logo a:hover{
+    text-decoration: none;
+    animation: zoomInLogo 1s infinite;
+}
+
+
+.form-bg{
+    background-color:black;
+    color: lightyellow;
+}
+
+#post{
+    box-shadow: 0 0 6px 2px black;
+    padding: 10vh 0 15vh 0;
+    text-align: center;
+    background-color:black;
+    border-bottom: 5px double white;
+}
+
+#post h2{
+    font-weight: bold;
+    color: yellow;
+}
+
+#feature-posts{
+    box-shadow: 0 0 6px 2px black;
+    padding: 10vh 0 15vh 0;
+    text-align: center;
+    background-color:black;
+    border-bottom: 5px double white;
+    color: yellow;
+}
+
+#feature-posts h4{
+    color: yellow;
+}
+
+.button-back{
+    color: black;
+    background-color: white;
+    padding: 10px;
+    margin-left: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.form-holder-new-post{
+    margin: 0 auto;
+    width: 40vw;
+    padding: 50px 10px;
+    border-radius: 4px;
+    background-color:white;
+    box-shadow: 0 0 2px 3px white;
+}
+
+.form-holder-new-post:hover{
+    box-shadow: 0 0 5px 2px black;
+    transition-duration: 0.5s;
+}
+
+.input-file{
+    border: 1px solid black;
+    background-color: lightyellow;
+    width: 90%;
+    padding: 10px 5px;
+    margin-bottom: 3px;
+    margin-left: 2vw;
+}
+
+.feature-image{
+    max-width: 100%;
+    max-height: 50%;
+    box-shadow: 0 0 3px 3px white;
+    padding: 5px;
+}
+
+.images{
+    min-height: 400px;
+    text-align: center;
+}
+
+.images a{
+    text-decoration: none;
+    color: white;
+}
+
+#display{
+    min-height: 50vh;
+    background-color: black;
+    padding: 10vh 0;
+}
+
+#display:hover{
+    box-shadow: 0 0 8px 2px black;
+    transition-duration: 0.5s;
+}
+
+.post-icon{
+    margin-right: 1vw;
+}
+
+.images i{
+    color: white;
+    font-size: 35px;
+}
+
+#show{
+    color: white;
+    padding: 5vh 0 10vh 0;
+    min-height: 80vh;
+    background-color:black;
+    border-bottom: 5px double white;
+}
+
+#show h2{
+    color: yellow;
+}
+
+.heading{
+    text-align: center;
+}
+
+.caption{
+    text-align: right;
+}
+
+.show-box{
+    padding: 10vh 0;
+}
+
+.show-image{
+    width: 50%;
+    height: 50%;
+    box-shadow: 0 0 3px 3px white;
+    padding: 5px;
+}
+
+.rightshift{
+    text-align: right;
+}
+
+.leftshift{
+    text-align: left;
+}
+
+
+.input-file{
+    border: 1px solid black;
+    background-color: lightyellow;
+    width: 90%;
+    padding: 10px 5px;
+    margin-bottom: 3px;
+    margin-left: 2vw;
+}
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 99; 
+    border: none; 
+    outline: none;
+    background-color: white; 
+    color: black; 
+    cursor: pointer;
+    padding: 10px 15px; 
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px lightcoral;
+    font-size: 20px; 
+}
+
+#myBtn:hover {
+    box-shadow: none;
+}
+
+.location{
+    color: yellow;
+}
+
+/*
+@keyframes fadeIn{
+    from { display: none;}
+    to { display: block;}
+}
+
+@keyframes fadeOut{
+    from { display: block;}
+    to { display: none;}
+}
+*/
+
+.preload{
+    position: fixed;
+    top: 30vh;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.preload-finish{
+    opacity: 0;
+    /* We can't do display: none as it would remove the preloader from the DOM*/
+    pointer-events: none;
+}
+
+
+.loadingphoto{
+    height: 90px;
+    animation: loadingphoto 1s ease infinite alternate;
+}
+
+.welcomeText{
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    padding: 40vh 0;
+    color: white;
+}
+
+.slideshow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+  .slideshow li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 20s linear infinite;
+  }
+  
+  
+  
+  /* Animations*/
+  
+  .slideshow li:nth-child(1) {
+    background-image: url('../img/1.webp');
+  }
+  .slideshow li:nth-child(2) {
+    background-image: url('../img/2.webp');
+    animation-delay: 5s;
+  }
+  .slideshow li:nth-child(3) {
+    background-image: url('../img/3.webp');
+    animation-delay: 10s;
+  }
+  .slideshow li:nth-child(4) {
+    background-image: url('../img/4.webp');
+    animation-delay: 15s;
+  }
+  .slideshow li:nth-child(5) {
+    background-image: url('../img/5.webp');
+    animation-delay: 20s;
+  }
+  
+
+.welcomeBox{
+    margin: 0 auto;
+    width: 40vw;
+    border-radius: 10px;
+    padding: 5vh 0;
+    background-color: rgb(0,0,0,0.7);
+    box-shadow: 0 0 2px 3px black;
+}
+  
+.sideButton{
+    position: absolute;
+    box-shadow: 0 1px 1px 2px white;
+    top: 5%;
+    /* to make rounded button */
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 25px;
+    
+    background-color: yellow;
+    padding: 10px;
+    color: black;
+}
+
+.sideInstagram{
+    position: absolute;
+    top: 5%;
+    color:yellow;
+    font-size: 40px;
+}
+
+.sideInstagram .fa-instagram{
+    color: #eb38a0;
+}
+
+.spannedFollow{
+    color: yellow;
+    position: absolute;
+    font-size: 25px;
+    left: 5%;
+    top: 12%;
+}
+
+.leftside{
+    left: 5%;
+}
+
+.rightside{
+    right: 5%;
+}
+
+.middle{
+    right: 18%;
+}
+
+.sideButton:hover{
+    box-shadow: none;
+    background-color: yellow;
+    transition-duration: 1s;
+}
+
+.spannedText{
+    color:yellow;
+}
+
+.button{
+    border: none;
+    border-radius: 4px;
+    padding: 5px 5px;
+    font-size: 17px;
+    font-weight: bold;
+    color: yellow;
+    background-color:black;
+}
+
+.button-success:hover{
+    background-color: yellow;
+    transition-duration: 1s;
+    font-weight: bold;
+}
+
+.welcomeText a{
+    text-decoration: none;
+}
+
+.welcomeText a:hover{
+    color: black;
+}
+
+
+#feature{
+    padding:10vh 0;
+    text-align: center;
+}
+
+#feature h1{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+
+#feature:hover{
+    box-shadow:0 0 8px 2px white;
+    transition-duration: 0.5s;
+}
+
+#user-forms{
+    padding: 10vh 0;
+    text-align: center;
+    border-bottom: 5px double white;
+    background-color: black;
+}
+
+#user-forms h1{
+    font-weight: bold;
+    font-size: 40px;
+    color: yellow;
+}
+
+#user-forms p{
+    color: lightcoral;
+}
+
+#user-forms p a{
+    color: black;
+}
+
+#user-forms p a:hover{
+    text-decoration: none;
+}
+
+.form-holder-user{
+    margin: 0 auto;
+    width: 40vw;
+    padding: 50px 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.form-holder-user:hover{
+    box-shadow: 0 0 5px 2px white;
+    transition-duration: 0.5s;
+}
+
+#about{
+    text-align: center;
+    padding: 10vh 0;
+    min-height: 40vh;
+    background-color: black;
+    color: white;
+}
+
+#about h1{
+    font-weight: bold;
+    color: yellow;
+}
+
+#about:hover{
+    box-shadow:0 0 8px 2px black;
+    transition-duration: 0.5s;
+}
+
+.me{
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+}
+
+.info{
+    margin-top: 20px;
+    padding: 15vh 0 0 0;
+}
+
+.words{
+    color: yellow;
+}
+
+#contact{
+    padding: 10vh 0;
+    text-align: center;
+}
+
+#contact h1{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#contact:hover{
+    box-shadow:0 0 8px 2px white;
+    transition-duration: 0.5s;
+}
+
+.form-container{
+    padding: 10vh 0 10vh 0;
+}
+
+.form-holder{
+    margin: 0 auto;
+    width: 40vw;
+    padding: 50px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.form-holder:hover{
+    box-shadow: 0 0 5px 2px black;
+    transition-duration: 0.5s;
+}
+
+.input-field{
+    border: 1px solid black;
+    background-color: lightyellow;
+    width: 90%;
+    padding: 10px 5px;
+    margin-bottom: 3px;
+}
+
+.input-field:focus{
+    outline: none;
+    border: 1px dashed black;
+}
+
+#footer{
+    padding: 5vh;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.heart{
+    color: red;
+}
+
+.mylinks li{
+    list-style-type: none;
+    display: inline;
+    overflow: hidden;
+    margin-right: 30px;
+}
+
+.mylinks{
+    text-align: center;
+}
+
+.mylinks h3{
+    margin-bottom: 40px;
+    color: yellow;
+}
+
+.instagram a{
+    color:#eb38a0;
+    font-size: 30px;
+}
+
+.facebook a{
+    color: #3d75ee;
+    font-size: 25px;
+}
+
+.linkedin a{
+    color: #b8ceeb;
+    font-size: 25px;
+}
+
+.gmail a{
+    color: #b6382f;
+    font-size: 25px;
+}
+
+.showcaseArea{
+    min-height: 100vh;
+}
+
+.coverImage{
+    text-align: center;
+    border: 1px solid black;
+}
+
+.coverImage img{
+    max-width: 300px;
+    max-height: 200px;
+}
+
+
+@keyframes zoomIn{
+    from{ font-size: 20px; }
+    to{ font-size: 25px; }
+}
+
+@keyframes zoomInLogo{
+    from{ font-size: 30px; }
+    to{ font-size: 35px; }
+}
+
+@keyframes zoomNone{
+    from { font-size: 20px;}
+    to {font-size: 20px;}
+}
+
+@keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+    }
+  }
+
+  
+@keyframes loadingphoto{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(25px);
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .images i{
+        padding-bottom: 10px;
+        border-bottom: 5px double lightcoral;
+    }
+
+    .rightshift{
+        text-align: center;
+    }
+
+    .leftshift{
+        text-align: center;
+    }
+
+    .heading h2{
+        font-size: 25px;
+    }
+
+    nav{ 
+        height: 5vh;
+        padding: 1vh 2vw;
+    }
+
+    .toggle{
+        display: block;
+    }
+
+    nav ul{ 
+        display: none;
+        width: 100vw;
+    }
+
+    nav ul li{
+        display: block;
+    }
+
+    nav ul li:hover{
+        animation: zoomNone 1s infinite;
+    }
+
+    nav ul li i{
+        margin-left: 25vw;
+    }
+
+    .moreHeight{
+        height: 25vh;
+    }
+
+    .active{
+        display: block;
+    }
+
+    .brand img{
+        max-height: 8vh;
+        max-width: 16vw;
+    }
+
+    .input-file{
+        margin-left: 5vw;
+    }
+
+    .welcomeText h1{
+        font-size: 25px;
+    }
+
+    .button-success{
+        font-size: 12px;
+    }
+
+    #feature{
+        padding: 5vh 0;
+    }
+
+    .form-container{
+        padding: 5vh 0 10vh 0;
+    }
+
+    #contact{
+        padding: 2vh 0 10vh 0;
+    }
+
+    .shot{
+        width: 60%;
+    }
+
+    .info{
+        padding: 5vh 0;
+    }
+
+    .me{
+        width: 40%;
+        height: 40%;
+    }
+
+    .info h4{
+        font-size: 17px;
+    }
+
+    .hooman{
+        width: 40%;
+        height: 20%;
+    }
+
+    .form-holder{
+        width: 100vw;
+    }
+
+    .form-holder-user{
+        width: 90vw;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    .images{
+        min-height: 380px;
+    }
+
+    .feature-image{
+        max-width: 55%;
+    }
+    
+    .rightshift{
+        text-align: center;
+    }
+
+    .leftshift{
+        text-align: center;
+    }
+    
+    .heading h2{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .me{
+        width: 30%;
+        height: 30%;
+    }
+
+    .form-holder{
+        width: 10s0vw;
+    }
+
+    .form-holder-user{
+        width: 90vw;
+    }
+
+    .rightshift{
+        text-align: center;
+    }
+
+    .leftshift{
+        text-align: center;
+    }
+
+    .heading h2{
+        font-size: 25px;
+    }
+
+    .form-holder-new-post{
+        width: 90vw;
+    }
+
+    .brand img{
+        max-height: 10vh;
+        max-width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .middle{
+        right: 22%;
+    }
+}
+
+@media only screen and (min-width: 601px){
+    .middle{
+        right: 14%;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .middle{
+        right: 12%;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .middle{
+        right: 10%;
+    }
+}
+
