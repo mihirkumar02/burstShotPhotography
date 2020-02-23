@@ -216,10 +216,11 @@ app.post('/mail', (req, res) => {
         name: name, email: email,instagram: instagram, message: message
     });
     mail.save()
-        .then(() => console.log('Thank You!'))
+        .then(() => {
+            req.flash("success", "Thank you! I hope you like the photos..");
+            res.redirect('/');
+        })
         .catch(err => req.flash("error", "Something went wrong!"));
-    req.flash("success", "Thank you! I hope you like the photos..");
-    res.redirect('/');
 });
 
 
