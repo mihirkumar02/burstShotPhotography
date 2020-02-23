@@ -277,7 +277,7 @@ nav ul li a:hover{
 
 @media only screen and (max-width: 768px){
     .images{
-        min-height: 400px;
+        min-height: 330px;
     }
 
     .feature-image{
