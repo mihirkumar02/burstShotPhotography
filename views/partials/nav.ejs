@@ -4,8 +4,6 @@
 </div>
 <nav class="topnav">
     <ul>    
-        <li><a href="/#contact"><i class="fa fa-envelope"></i> Contact</a></li>
-        <li><a href="/#feature"><i class="fa fa-photo"></i> Get Featured!</a></li>
         <% if(currentUser){ %>
             <% if(currentUser.role === 'Admin') { %>
                 <li><a href="/photographs/new"><i class="fa fa-plus"></i> Add Post</a></li>
@@ -13,6 +11,8 @@
             <% } %>
             <li><a href="/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
         <% } else { %>
+            <li><a href="/#contact"><i class="fa fa-envelope"></i> Contact</a></li>
+            <li><a href="/#feature"><i class="fa fa-photo"></i> Get Featured!</a></li>
             <li><a href="/users/login"><i class="fa fa-sign-in"></i> Login</a></li>
             <li><a href="/users/register"><i class="fa fa-user"></i> SignUp</a></li>
         <% } %>
