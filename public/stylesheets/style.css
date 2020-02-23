@@ -30,7 +30,7 @@ textarea{
 
 
 .loadingphoto{
-    height: 80px;
+    height: 90px;
     animation: loadingphoto 1s ease infinite alternate;
 }
 
@@ -38,7 +38,6 @@ textarea{
     from{
         transform: translateY(0);
     }
-
     to{
         transform: translateY(50px);
     }
