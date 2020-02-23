@@ -22,12 +22,25 @@
     <%- include('../partials/nav') %>
     <section id="display">
         <div class="container">
+            <% if(error && error.length > 0){%>
+            <div class="alert alert-danger">
+              <h4> <%= error %> </h4>
+            </div>
+            <% } %>
+          
+            <% if(success && success.length > 0){%>
+            <div class="alert alert-success">
+              <h4> <%= success %> </h4>
+            </div>
+            <% } %>
+        </div>
+        <div class="container">
             <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
             <div class="row">
                 <% posts.forEach(function(post){ %>
                     <div class="col-md-3 col-sm-6 images">
                         <img class="feature-image" src="/admin/<%= post.image %>" alt="Image">
-                        <h4><%= post.location %></h4>
+                        <h4 class="location"><%= post.location %></h4>
                         <span class="instagram post-icon"><a target="_blank" href="<%= post.instagram %>"><i class="fa fa-instagram"></i></a></span>
                         <span class="instagram"><a href="/photographs/<%= post._id %>"><i class="fa fa-info-circle"></i></a></span>
                     </div>

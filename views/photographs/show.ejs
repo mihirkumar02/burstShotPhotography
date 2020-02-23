@@ -19,8 +19,20 @@
 
 <body>
     <%- include('../partials/nav') %>
-
     <section id="show">
+        <div class="container">
+            <% if(error && error.length > 0){%>
+            <div class="alert alert-danger">
+              <h4> <%= error %> </h4>
+            </div>
+            <% } %>
+          
+            <% if(success && success.length > 0){%>
+            <div class="alert alert-success">
+              <h4> <%= success %> </h4>
+            </div>
+            <% } %>
+        </div>
         <a class="button button-back" href="/photographs"><i class="material-icons">arrow_back</i></a>
         <div class="heading">
             <h2>Clicked by : <%= post.photographer %></h2>

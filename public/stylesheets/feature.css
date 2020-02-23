@@ -28,6 +28,10 @@
     box-shadow: none;
 }
 
+.location{
+    color: yellow;
+}
+
 /*
 @keyframes fadeIn{
     from { display: none;}

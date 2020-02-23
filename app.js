@@ -6,6 +6,7 @@ const session = require('express-session');
 const path = require('path');
 const multer = require('multer');
 const bcrypt = require('bcryptjs');
+const flash = require('connect-flash');
 const User = require('./models/user');
 const Post = require('./models/post');
 const Mail = require('./models/mail');
@@ -42,14 +43,15 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Connect flash
+app.use(flash());
+
 // Global variables
 app.use(function(req, res, next) {
     res.locals.currentUser = req.user;
-    /*
-    res.locals.success_msg = req.flash('success_msg');
-    res.locals.error_msg = req.flash('error_msg');
+    res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
-    */
+    // res.locals.error = req.flash('error');
     next();
 });
 
@@ -128,7 +130,7 @@ app.get('/', (req, res) =>{
 app.get('/photographs', (req, res) => {
     Post.find({}, (err, posts) => {
         if(err){
-            console.log(err);
+            req.flash("error", "Something went wrong!");
         } else {
             res.render('photographs/index', {posts: posts});
         }
@@ -143,11 +145,11 @@ app.get('/photographs/new', isAdmin, (req, res) => {
 app.post('/photographs', isAdmin, (req, res) => {
     adminUpload(req, res, (err) => {
         if(err){
-            console.log('Could not upload!');
+            req.flash("error", "Could not upload!");
             res.redirect('/photographs/new');
         } else {
             if(req.file === undefined){
-                console.log('No file selected!');
+                req.flash("error", "No file selected!");
                 res.redirect('/photographs/new');
             } else {
                 const { photographer, location, caption, instagram, featured } = req.body;
@@ -156,7 +158,7 @@ app.post('/photographs', isAdmin, (req, res) => {
                 });
                 post.save()
                     .then(() => {
-                        console.log("Posted!");
+                        req.flash("success", "Posted!");
                         res.redirect('/photographs');
                     })
                     .catch(err => console.log(err));
@@ -168,7 +170,7 @@ app.post('/photographs', isAdmin, (req, res) => {
 app.get('/photographs/:post_id', (req, res) => {
     Post.findById(req.params.post_id, (err, post) => {
         if(err){
-            console.log(err);
+            req.flash("error", "Something went wrong!");
         } else {
             res.render('photographs/show', {post: post});
         }
@@ -214,8 +216,8 @@ app.post('/mail', (req, res) => {
         name: name, email: email,instagram: instagram, message: message
     });
     mail.save()
-        .then(() => console.log("Thank you! I'll reply soon!"))
-        .catch(err => console.log(err));
+        .then(() => req.flash("error", "Thank you! I'll reply soon!"))
+        .catch(err => req.flash("error", "Something went wrong!"));
     res.redirect('/photographs');
 });
 
@@ -225,11 +227,11 @@ app.post('/mail', (req, res) => {
 app.post('/feature', (req, res) => {
     featureUpload(req, res, (err) => {
         if(err){
-            console.log('Could not upload!');
+            req.flash("error", "Could not upload!");
             res.redirect('/');
         } else {
             if(req.file === undefined){
-                console.log('No file selected!');
+                req.flash("error", "No file selected!");
                 res.redirect('/');
             } else {
                 const { photographer, location, caption, instagram } = req.body;
@@ -238,6 +240,7 @@ app.post('/feature', (req, res) => {
                 });
                 feature.save()
                     .then(() => {
+                        req.flash("success", "Your photo will be uploaded soon!"); 
                         res.redirect('/photographs');
                     })
                     .catch(err => console.log(err));
@@ -310,7 +313,7 @@ User.findOne({ email: email })
                     newUser.password = hash;
                     newUser.save()
                         .then(user => {
-                            //req.flash('success_msg', 'You are now registered and can log in.');
+                            req.flash('success', 'You are now registered and can log in.');
                             res.redirect('/users/login');
                         })
                         .catch(err => console.log(err));
@@ -325,14 +328,14 @@ app.post('/users/login', (req, res, next) => {
     passport.authenticate('local', {
         successRedirect: '/photographs',
         failureRedirect: '/users/login',
-        //failureFlash: true
+        failureFlash: true
     })(req, res, next);
 });
 
 // Logout handling
 app.get('/logout', (req, res)=>{
     req.logout();
-    //req.flash('success_msg', 'You are logged out!');
+    req.flash('success', 'You are logged out!');
     res.redirect('/users/login');
 });
 
