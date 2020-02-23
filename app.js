@@ -177,8 +177,8 @@ app.get('/photographs/:post_id', (req, res) => {
     });
 });
 
-/*
-app.get('/photographs/requests', (req, res) => {
+
+app.get('/photographs/:id/requests', (req, res) => {
     Feature.find({}, (err, foundPosts) =>{ 
         if(err){
             console.log(err);
@@ -194,8 +194,6 @@ app.get('/photographs/requests', (req, res) => {
     });
 });
 
-<li><a href="/photographs/requests"><i class="fa fa-plus"></i> Requests</a></li>
-
 // Download option for Admin
 app.get('/photographs/:post_id', (req, res) =>{
     Feature.findById(req.params.post_id, (err, post) => {
@@ -206,7 +204,7 @@ app.get('/photographs/:post_id', (req, res) =>{
         }
     });
 });
-*/
+
 
 // ======= CONTACT ME =======
 

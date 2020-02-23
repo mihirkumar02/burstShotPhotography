@@ -9,6 +9,7 @@
         <% if(currentUser){ %>
             <% if(currentUser.role === 'Admin') { %>
                 <li><a href="/photographs/new"><i class="fa fa-plus"></i> Add Post</a></li>
+                <li><a href="/photographs/<%= currentUser._id %>/requests"><i class="fa fa-plus"></i> Requests</a></li>
             <% } %>
             <li><a href="/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
         <% } else { %>
