@@ -31,28 +31,16 @@ textarea{
 
 .loadingphoto{
     height: 80px;
-    animation: loadingphoto 2s ease infinite;
+    animation: loadingphoto 1s ease infinite alternate;
 }
 
 @keyframes loadingphoto{
-    0%{
-        height: 80px;
+    from{
+        transform: translateY(0);
     }
 
-    20%{
-        height: 90px;
-    }
-
-    40%{
-        height: 100px;
-    }
-
-    60%{
-        height: 90px;
-    }
-
-    80%{
-        height: 80px;
+    to{
+        transform: translateY(50px);
     }
 }
 
