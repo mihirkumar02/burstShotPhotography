@@ -1,3 +1,16 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    max-width: 100vw;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+textarea{ 
+    resize: none;
+}
+
 nav{
     padding: 3vh 5vw;
     height: 15vh;
@@ -164,6 +177,11 @@ nav ul li a:hover{
     margin-right: 1vw;
 }
 
+.images i{
+    color: white;
+    font-size: 35px;
+}
+
 #show{
     color: white;
     padding: 5vh 0 10vh 0;
@@ -201,125 +219,6 @@ nav ul li a:hover{
 
 .leftshift{
     text-align: left;
-}
-
-
-@keyframes zoomIn{
-    from{ font-size: 20px; }
-    to{ font-size: 25px; }
-}
-
-@keyframes zoomInLogo{
-    from{ font-size: 30px; }
-    to{ font-size: 35px; }
-}
-
-@keyframes zoomNone{
-    from { font-size: 20px;}
-    to {font-size: 20px;}
-}
-
-@media only screen and (max-width: 600px){
-    .images i{
-        padding-bottom: 10px;
-        border-bottom: 5px double lightcoral;
-    }
-
-    .rightshift{
-        text-align: center;
-    }
-
-    .leftshift{
-        text-align: center;
-    }
-
-    .heading h2{
-        font-size: 25px;
-    }
-
-    nav{ 
-        height: 5vh;
-        padding: 1vh 2vw;
-    }
-
-    .toggle{
-        display: block;
-    }
-
-    nav ul{ 
-        display: none;
-        width: 100vw;
-    }
-
-    nav ul li{
-        display: block;
-    }
-
-    nav ul li:hover{
-        animation: zoomNone 1s infinite;
-    }
-
-    nav ul li i{
-        margin-left: 25vw;
-    }
-
-    .moreHeight{
-        height: 25vh;
-    }
-
-    .active{
-        display: block;
-    }
-
-    .brand img{
-        max-height: 8vh;
-        max-width: 16vw;
-    }
-}
-
-@media only screen and (max-width: 768px){
-    .images{
-        min-height: 380px;
-    }
-
-    .feature-image{
-        max-width: 55%;
-    }
-    
-    .rightshift{
-        text-align: center;
-    }
-
-    .leftshift{
-        text-align: center;
-    }
-    
-    .heading h2{
-        font-size: 25px;
-    }
-}
-
-@media only screen and (max-width: 992px){
-    .rightshift{
-        text-align: center;
-    }
-
-    .leftshift{
-        text-align: center;
-    }
-
-    .heading h2{
-        font-size: 25px;
-    }
-
-    .form-holder-new-post{
-        width: 90vw;
-    }
-
-    .brand img{
-        max-height: 10vh;
-        max-width: 20vw;
-    }
 }
 
 
@@ -369,25 +268,6 @@ nav ul li a:hover{
 }
 */
 
-@media only screen and (max-width: 600px){
-    .input-file{
-        margin-left: 5vw;
-    }
-}
-
-*{
-    font-family: 'Roboto', sans-serif;
-    max-width: 100vw;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-textarea{ 
-    resize: none;
-}
-
 .preload{
     position: fixed;
     top: 30vh;
@@ -410,16 +290,6 @@ textarea{
     height: 90px;
     animation: loadingphoto 1s ease infinite alternate;
 }
-
-@keyframes loadingphoto{
-    from{
-        transform: translateY(0);
-    }
-    to{
-        transform: translateY(25px);
-    }
-}
-
 
 .welcomeText{
     text-align: center;
@@ -479,23 +349,6 @@ textarea{
     animation-delay: 20s;
   }
   
-  @keyframes imageAnimation {
-    0% {
-      opacity: 0;
-      animation-timing-function: ease-in;
-    }
-    10% {
-      opacity: 1;
-      animation-timing-function: ease-out;
-    }
-    20% {
-      opacity: 1;
-    }
-    30% {
-      opacity: 0;
-    }
-  }
-
 
 .welcomeBox{
     margin: 0 auto;
@@ -782,8 +635,110 @@ textarea{
 }
 
 
+@keyframes zoomIn{
+    from{ font-size: 20px; }
+    to{ font-size: 25px; }
+}
+
+@keyframes zoomInLogo{
+    from{ font-size: 30px; }
+    to{ font-size: 35px; }
+}
+
+@keyframes zoomNone{
+    from { font-size: 20px;}
+    to {font-size: 20px;}
+}
+
+@keyframes imageAnimation {
+    0% {
+      opacity: 0;
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0;
+    }
+  }
+
+  
+@keyframes loadingphoto{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(25px);
+    }
+}
+
 
 @media only screen and (max-width: 600px){
+    .images i{
+        padding-bottom: 10px;
+        border-bottom: 5px double lightcoral;
+    }
+
+    .rightshift{
+        text-align: center;
+    }
+
+    .leftshift{
+        text-align: center;
+    }
+
+    .heading h2{
+        font-size: 25px;
+    }
+
+    nav{ 
+        height: 5vh;
+        padding: 1vh 2vw;
+    }
+
+    .toggle{
+        display: block;
+    }
+
+    nav ul{ 
+        display: none;
+        width: 100vw;
+    }
+
+    nav ul li{
+        display: block;
+    }
+
+    nav ul li:hover{
+        animation: zoomNone 1s infinite;
+    }
+
+    nav ul li i{
+        margin-left: 25vw;
+    }
+
+    .moreHeight{
+        height: 25vh;
+    }
+
+    .active{
+        display: block;
+    }
+
+    .brand img{
+        max-height: 8vh;
+        max-width: 16vw;
+    }
+
+    .input-file{
+        margin-left: 5vw;
+    }
+
     .welcomeText h1{
         font-size: 25px;
     }
@@ -835,7 +790,30 @@ textarea{
     }
 }
 
-@media only screen and (max-width: 992px){    
+
+@media only screen and (max-width: 768px){
+    .images{
+        min-height: 380px;
+    }
+
+    .feature-image{
+        max-width: 55%;
+    }
+    
+    .rightshift{
+        text-align: center;
+    }
+
+    .leftshift{
+        text-align: center;
+    }
+    
+    .heading h2{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 992px){
     .me{
         width: 30%;
         height: 30%;
@@ -847,6 +825,27 @@ textarea{
 
     .form-holder-user{
         width: 90vw;
+    }
+
+    .rightshift{
+        text-align: center;
+    }
+
+    .leftshift{
+        text-align: center;
+    }
+
+    .heading h2{
+        font-size: 25px;
+    }
+
+    .form-holder-new-post{
+        width: 90vw;
+    }
+
+    .brand img{
+        max-height: 10vh;
+        max-width: 20vw;
     }
 }
 
@@ -873,3 +872,4 @@ textarea{
         right: 10%;
     }
 }
+
