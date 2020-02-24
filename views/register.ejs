@@ -18,6 +18,7 @@
 
 <body>
     <%- include('./partials/nav') %>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
     <section id="user-forms">
       <div class="container">
         <% if(error && error.length > 0){%>
@@ -38,24 +39,24 @@
             <div class="form-holder-user">
                 <form action="/users/register" method="POST">
                     <div class="row">
-                      <input class="input-field" type="name" name="fname" placeholder="First name.." value="<%= typeof fname != 'undefined' ? fname : '' %>"/>
+                      <input class="user-input-field" type="name" name="fname" placeholder="First name.." value="<%= typeof fname != 'undefined' ? fname : '' %>"/>
                     </div>
                     <div class="row">
-                      <input class="input-field" type="name" name="lname" placeholder="Last name.." value="<%= typeof lname != 'undefined' ? lname : '' %>"/>
+                      <input class="user-input-field" type="name" name="lname" placeholder="Last name.." value="<%= typeof lname != 'undefined' ? lname : '' %>"/>
                     </div>
                     <div class="row">
-                      <input class="input-field" type="email" name="email" placeholder="Email.." value="<%= typeof email != 'undefined' ? email : '' %>"/>
+                      <input class="user-input-field" type="email" name="email" placeholder="Email.." value="<%= typeof email != 'undefined' ? email : '' %>"/>
                     </div>
                     <div class="row">
-                      <input class="input-field" type="password" name="password" placeholder="Enter Strong Password.." value="<%= typeof password != 'undefined' ? password : '' %>"/>
+                      <input class="user-input-field" type="password" name="password" placeholder="Enter Strong Password.." value="<%= typeof password != 'undefined' ? password : '' %>"/>
                     </div>
                     <div class="row">
-                      <input class="input-field" type="text" name="instagram" placeholder="Instagram ID.." value="<%= typeof contact != 'undefined' ? contact : '' %>"/>
+                      <input class="user-input-field" type="text" name="instagram" placeholder="Instagram ID.." value="<%= typeof contact != 'undefined' ? contact : '' %>"/>
                     </div>
                     <div class="row">
-                      <input class="input-field" type="text" name="role" readonly="readonly" value="User"/>
+                      <input class="user-input-field" type="text" name="role" readonly="readonly" value="User"/>
                     </div>
-                    <button class="button button-submit">SignUp</button>
+                    <button class="user-button">SignUp</button>
                 </form>
                 <p class="lead mt-4">
                     Have an account? <a href="/users/login">Login</a>

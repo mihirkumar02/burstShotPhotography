@@ -18,6 +18,7 @@
 
 <body>
     <%- include('./partials/nav') %>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up"></i></button>
     <section id="user-forms">
         <div class="container">
             <% if(error && error.length > 0){%>
@@ -42,7 +43,7 @@
                         type="email"
                         id="email"
                         name="email"
-                        class="input-field"
+                        class="user-input-field"
                         placeholder="Enter Email.."
                       />
                     </div>
@@ -51,12 +52,12 @@
                         type="password"
                         id="password"
                         name="password"
-                        class="input-field"
+                        class="user-input-field"
                         placeholder="Enter Password"
                       />
                     </div>
 
-                    <button class="button button-submit">Login</button>
+                    <button class="user-button">Login</button>
                 </form>
                 <p class="lead mt-4">
                     No Account? <a href="/users/register">Register</a>
