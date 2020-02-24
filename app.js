@@ -304,6 +304,12 @@ app.get('/messages', isAdmin, (req, res) =>{
     });
 });
 
+// ==================================
+// ========== PARALLAX ==============
+// ==================================
+app.get('/parallax', (req, res) =>{
+    res.render('photographs/parallax');
+});
 
 // ============= AUTHENTICATION ==========
 
