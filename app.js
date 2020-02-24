@@ -246,7 +246,7 @@ app.post('/feature', (req, res) => {
 
 // Approve posts for featuring
 
-app.post('/feature/:post_id', isAdmin, (req, res) => {
+app.put('/feature/:post_id', isAdmin, (req, res) => {
     Feature.findByIdAndUpdate(req.params.post_id, {featured: true}, (err, post) =>{
         if(err){
             console.log(err);

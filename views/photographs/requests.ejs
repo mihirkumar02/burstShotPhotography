@@ -49,7 +49,7 @@
                                 <button class="button"><i class="material-icons">file_download</i></button>
                             </form>
                             <% if(!post.featured) { %>
-                                <form action="/feature/<%= post._id %>" method="POST">
+                                <form action="/feature/<%= post._id %>?_method=PUT" method="POST">
                                     <button class="button"><i class="material-icons">check</i></button>
                                 </form>
                             <% } else { %>
