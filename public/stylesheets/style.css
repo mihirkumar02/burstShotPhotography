@@ -79,19 +79,23 @@
   }
 
   .flip-card-back{
-    text-align: center;
     transform: rotateY(180deg);
   }
 
   .feature-image{max-width:100%;max-height:50%;box-shadow:0 0 3px 3px white;padding:5px;border-radius:25px;}
   /*.feature-image:hover{opacity:0.9;transform: scale(1.1);transition-duration:0.5s}*/
-  .images{min-height:400px;text-align:center}
+  .images{min-height:410px;text-align:center}
   
   .images a{text-decoration:none;color:white}
   .images-featured{min-height:400px;text-align:center}
   .images-featured a{text-decoration:none;color:white}
 
+  @media only screen and (max-width: 600px){
+    .images{box-shadow: 0 0 5px 1px white;padding-top: 15px;margin-bottom: 2px;}
+    .images:hover{box-shadow: none;}
+  }
   @media only screen and (max-width: 992px){
     .feature-image{max-width:60%;}
+
   }
   
