@@ -389,6 +389,7 @@ app.post('/users/login', (req, res, next) => {
     passport.authenticate('local', {
         successRedirect: '/photographs',
         failureRedirect: '/users/login',
+        successFlash: 'Welcome!',
         failureFlash: true
     })(req, res, next);
 });
