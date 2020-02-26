@@ -1,23 +1,23 @@
-<a class="brand" href="/"><img src="../img/logo.webp" alt="Camera"></a>
-<div class="toggle">
-    <div class="menu"><i class="fa fa-bars"></i></div>
-</div>
-<nav class="topnav">
-    <ul>    
-        <% if(currentUser){ %>
-            <% if(currentUser.role === 'Admin') { %>
-                <li><a href="/messages"><i class="fa fa-odnoklassniki"></i> Messages</a></li>
-                <li><a href="/photographs/new"><i class="fa fa-plus"></i> Add Post</a></li>
-                <li><a href="/requests"><i class="fa fa-upload"></i> Requests</a></li>
+<div class="nav-container">
+    <a class="brand" href="/"><img src="../img/logo.webp" alt="Camera"></a>
+    <div class="toggle">
+        <div class="menu"><i class="fa fa-bars"></i></div>
+    </div>
+    <nav class="topnav">
+        <ul>    
+            <% if(currentUser){ %>
+                <% if(currentUser.role === 'Admin') { %>
+                    <li><a href="/messages"><i class="fa fa-odnoklassniki"></i> Messages</a></li>
+                    <li><a href="/photographs/new"><i class="fa fa-plus"></i> Add Post</a></li>
+                    <li><a href="/requests"><i class="fa fa-upload"></i> Requests</a></li>
+                <% } %>
+                <li><a href="/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+            <% } else { %>
+                <li><a href="/#contact"><i class="fa fa-envelope"></i> Contact</a></li>
+                <li><a href="/#feature"><i class="fa fa-photo"></i> Get Featured!</a></li>
+                <li><a href="/users/login"><i class="fa fa-sign-in"></i> Login</a></li>
+                <li><a href="/users/register"><i class="fa fa-user"></i> SignUp</a></li>
             <% } %>
-            <li><a href="/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
-        <% } else { %>
-            <li><a href="/#contact"><i class="fa fa-envelope"></i> Contact</a></li>
-            <li><a href="/#feature"><i class="fa fa-photo"></i> Get Featured!</a></li>
-            <li><a href="/users/login"><i class="fa fa-sign-in"></i> Login</a></li>
-            <li><a href="/users/register"><i class="fa fa-user"></i> SignUp</a></li>
-        <% } %>
-    </ul>
-</nav>
-
-  
+        </ul>
+    </nav>    
+</div>
