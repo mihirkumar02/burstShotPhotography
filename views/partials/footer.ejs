@@ -1,5 +1,5 @@
 <section id="footer">
-    <div class="container">
+    <div class="container"> 
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <h4>Made with <span class="heart"><i class="fa fa-heart"></i></span> by Mihir Kumar Singh</h4>
@@ -22,11 +22,24 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
-        $('.menu').click(function(){
+        $('.menu i').click(function(){
             $('nav').toggleClass('moreHeight');
             $('ul').toggleClass('active');
         })
     })
+
+    var icon = document.getElementById('icon');
+    var menu = document.getElementById('menu');
+
+    menu.addEventListener('click', function(){
+        if(icon.classList.contains('fa-bars')){
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-close');
+        } else {
+            icon.classList.remove('fa-close');
+            icon.classList.add('fa-bars');
+        } 
+    });
 
     var mybutton = document.getElementById("myBtn");
 
