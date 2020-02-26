@@ -103,7 +103,7 @@ const featureUpload = multer({
 // Check file type
 function checkFileType(file, cb){
     // Allowed extensions
-    const filetypes = /jpeg|jpg|png|gif|webp/;
+    const filetypes = /jpeg|JPEG|jpg|JPG|png|PNG|gif|GIF|webp|WEBP/;
     // Check extension
     const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
     // Check mime
