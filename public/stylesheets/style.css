@@ -111,6 +111,9 @@
     .images-featured:hover{box-shadow: none;}    
   }
   @media only screen and (max-width: 992px){
-    .feature-image{max-width:60%;}
+    .feature-image{max-width:55%;}
   }
-  
+  /* Display only on 768 px or below devices, hide on above-sized devices*/
+  @media only screen and (min-width: 768px){
+    .whatsapp{display: none;}
+  }
