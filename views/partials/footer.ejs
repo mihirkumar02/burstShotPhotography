@@ -27,7 +27,19 @@
             $('nav').toggleClass('moreHeight');
             $('ul').toggleClass('active');
         })
-    })
+
+        $(window).scroll(function(){
+            if($(this).scrollTop() > 40){
+                $('#myBtn').fadeIn();
+            } else {
+                $('#myBtn').fadeOut();
+            }
+        });
+
+        $('#myBtn').click(function(){
+            $('html', 'body').animate({scrollTop: 0}, 800);
+        });
+    });
 
     var icon = document.getElementById('icon');
     var menu = document.getElementById('menu');
@@ -44,13 +56,14 @@
 
     var mybutton = document.getElementById("myBtn");
 
+    /*
     window.onscroll = function() {scrollFunction()};
 
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
+        mybutton.style.animation = "fadeIn";
       } else {
-        mybutton.style.display = "none";
+        mybutton.style.animation = "fadeOut";
       }
     }
 
@@ -58,6 +71,7 @@
       document.body.scrollTop = 0; // For Safari
       document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
+    */
 
     // A function that gets rid of the preloader
     window.addEventListener('load', function(){
