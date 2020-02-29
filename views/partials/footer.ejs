@@ -29,7 +29,7 @@
         })
 
         $(window).scroll(function(){
-            if($(this).scrollTop() > 40){
+            if($(this).scrollTop() > 20){
                 $('#myBtn').fadeIn();
             } else {
                 $('#myBtn').fadeOut();
@@ -37,7 +37,7 @@
         });
 
         $('#myBtn').click(function(){
-            $('html', 'body').animate({scrollTop: 0}, 800);
+            $('html , body').animate({scrollTop: 0}, 100);
         });
     });
 
