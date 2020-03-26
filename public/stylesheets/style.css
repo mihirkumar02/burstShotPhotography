@@ -117,3 +117,19 @@
   @media only screen and (min-width: 768px){
     .whatsapp{display: none;}
   }
+
+  ::-webkit-scrollbar{
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track{
+    background: black;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background: lightcoral;
+  }
+
+  ::-webkit-scrollbar-thumb:hover{
+    background: rgb(245, 167, 167);
+  }
